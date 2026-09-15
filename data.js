@@ -1,4 +1,4 @@
-// Gegenereerd door build.py op 2026-09-15 17:14
+// Gegenereerd door build.py op 2026-09-15 17:36
 window.HOUSES = [
  {
   "area": "Brunyola",
@@ -55,7 +55,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/brunyola/can-jaques",
     "price": "vanaf €567 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "rustieke stenen masia, alleen buitenfoto's"
  },
  {
   "area": "Countryside",
@@ -126,7 +128,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/vidreres/finca-robles",
     "price": "vanaf €457 / nacht"
    }
-  ]
+  ],
+  "modern": 3,
+  "modernNote": "nette loungeset, maar boho cabana gedateerd"
  },
  {
   "area": "Lloret Center",
@@ -190,7 +194,9 @@ window.HOUSES = [
     "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/casa-pilar.html",
     "price": ""
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "jaren-90 villa, balustrades, houten pergola"
  },
  {
   "area": "Calella - Center",
@@ -244,7 +250,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-maresme/calella/can-quadras",
     "price": "vanaf €256 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "oud herenhuis, klassieke binnenplaats"
  },
  {
   "area": "Aigua Viva Park",
@@ -303,7 +311,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/vidreres/can-ingrid",
     "price": "vanaf €430 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "basic zwembad met hekwerk, eenvoudig"
  },
  {
   "area": "Serra Brava",
@@ -363,7 +373,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/minerva",
     "price": "vanaf €395 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "Spaanse jaren-90 villa, balustrades, stenen gevel"
  },
  {
   "area": "Condado del Jaruco",
@@ -428,7 +440,9 @@ window.HOUSES = [
     "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-jaruco.html",
     "price": ""
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "traditionele villa, bakstenen barbecue, stenen banken"
  },
  {
   "area": "Blanes - Center",
@@ -485,7 +499,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/blanes/kiara",
     "price": "vanaf €256 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "geel jaren-80 huis, oude tegels"
  },
  {
   "area": "Serra Brava",
@@ -544,7 +560,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/la-venta",
     "price": "vanaf €541 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "traditionele villa, bogen, plastic stoelen"
  },
  {
   "area": "Condado de Jaruco",
@@ -599,7 +617,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/maika",
     "price": "vanaf €360 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "bakstenen huis, gedateerde kelder-speelkamer"
  },
  {
   "area": "Massias de Lloret",
@@ -657,7 +677,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/marimuntanya",
     "price": "vanaf €421 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "rieten pergola, plastic stoelen, gedateerd"
  },
  {
   "area": "Montbarbat",
@@ -714,7 +736,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/vidreres/rambla",
     "price": "vanaf €672 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "balustrades, groene luifel, ouderwetse veranda"
  },
  {
   "area": "Serra Brava",
@@ -774,7 +798,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/ardisia",
     "price": "vanaf €342 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "baksteen huis, eenvoudig en gedateerd"
  },
  {
   "area": "Mallorquinas",
@@ -831,7 +857,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/sils/can-metlla",
     "price": "vanaf €203 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "traditionele gele masia, klassiek"
  },
  {
   "area": "Roca Grossa",
@@ -857,12 +885,12 @@ window.HOUSES = [
   "rating": null,
   "reviews": 0,
   "images": [
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-fenals-lloret-lloret-de-m-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-01.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-fenals-lloret-lloret-de-m-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-02.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-fenals-lloret-lloret-de-m-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-03.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-fenals-lloret-lloret-de-m-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-04.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-fenals-lloret-lloret-de-m-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-05.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-fenals-lloret-lloret-de-m-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-06.jpg"
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-fenals-lloret-lloret-de-m-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-01.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-fenals-lloret-lloret-de-m-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-02.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-fenals-lloret-lloret-de-m-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-03.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-fenals-lloret-lloret-de-m-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-04.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-fenals-lloret-lloret-de-m-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-05.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-fenals-lloret-lloret-de-m-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-06.jpg?lossy=1&strip=1&webp=1"
   ],
   "luxury": true,
   "price": "vanaf £2.452 / week",
@@ -885,7 +913,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/sol-y-brisa",
     "price": "vanaf €440 / nacht"
    }
-  ]
+  ],
+  "modern": 3,
+  "modernNote": "nieuwe meubels in rustiek huis met balken"
  },
  {
   "area": "",
@@ -939,7 +969,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/joie-de-vivre",
     "price": "vanaf €559 / nacht"
    }
-  ]
+  ],
+  "modern": 3,
+  "modernNote": "licht interieur, veel glas, mix-stijl"
  },
  {
   "area": "Aigua Viva Park",
@@ -1011,7 +1043,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/vidreres/angel",
     "price": "vanaf €319 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "kitscherige beelden en tuinbar, gedateerd"
  },
  {
   "area": "Condado del Jaruco",
@@ -1084,7 +1118,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/california",
     "price": "vanaf €351 / nacht"
    }
-  ]
+  ],
+  "modern": 3,
+  "modernNote": "jaren-2000 huis, nette buitenkeuken"
  },
  {
   "area": "Montbarbat",
@@ -1143,7 +1179,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/vidreres/can-pauet",
     "price": "vanaf €692 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "rustieke bakstenen bogen, zware houten meubels"
  },
  {
   "area": "Condado del Jaruco",
@@ -1213,7 +1251,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/germana",
     "price": "vanaf €473 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "gele villa met balustrades, gedateerd"
  },
  {
   "area": "Los Principes",
@@ -1273,7 +1313,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-maresme/fogars-de-la-selva/admirada",
     "price": "vanaf €308 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "traditioneel geel huis, terracotta, basic"
  },
  {
   "area": "Coll Lop",
@@ -1330,7 +1372,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/arethusa",
     "price": "vanaf €142 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "klassieke balustrades, ouderwets terras"
  },
  {
   "area": "Aigua Viva Park",
@@ -1387,7 +1431,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/vidreres/ashley",
     "price": "vanaf €164 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "eenvoudig ouder huis, plastic ligbedden"
  },
  {
   "area": "",
@@ -1437,7 +1483,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/vidreres/can-borni",
     "price": "vanaf €322 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "rustiek interieur: natuursteen, oranje hout, terracotta"
  },
  {
   "area": "",
@@ -1461,12 +1509,12 @@ window.HOUSES = [
   "rating": null,
   "reviews": 0,
   "images": [
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1115705-01.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1115705-02.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1115705-03.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1115705-04.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1115705-05.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1115705-06.jpg"
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1115705-01.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1115705-02.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1115705-03.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1115705-04.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1115705-05.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1115705-06.jpg?lossy=1&strip=1&webp=1"
   ],
   "luxury": true,
   "price": "vanaf £8.253 / week",
@@ -1484,7 +1532,9 @@ window.HOUSES = [
     "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/catalonia/girona-region/villa-esmeralda-sa-caleta-lloret-de-mar/",
     "price": "vanaf £8.253 / week"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "gedateerde badkamers, oude houten deuren"
  },
  {
   "area": "Serra Brava",
@@ -1543,7 +1593,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/celada",
     "price": "vanaf €224 / nacht"
    }
-  ]
+  ],
+  "modern": 3,
+  "modernNote": "eenvoudig huis, moderne tuinmeubels"
  },
  {
   "area": "Serra Brava",
@@ -1599,7 +1651,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/cozumel",
     "price": "vanaf €422 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "stenen gevel, jaren-2000, aluminium stoelen"
  },
  {
   "area": "Turro de Lloret",
@@ -1658,7 +1712,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/icarus",
     "price": "vanaf €248 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "terracotta terras, stenen barbecue, alleen buitenfoto's"
  },
  {
   "area": "Lloret Dalt",
@@ -1714,7 +1770,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/ludovic",
     "price": "vanaf €64 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "gele gevel, balustrades, markiezen, jaren-90"
  },
  {
   "area": "Canyelles",
@@ -1771,7 +1829,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/maylea",
     "price": "vanaf €213 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "zwart leer, kristallen lampen, baksteen gevel"
  },
  {
   "area": "Font de Sant Llorenc",
@@ -1828,7 +1888,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/mirabelle",
     "price": "vanaf €257 / nacht"
    }
-  ]
+  ],
+  "modern": 4,
+  "modernNote": "strak wit huis, modern terras, interieur onbekend"
  },
  {
   "area": "Serra Brava",
@@ -1883,7 +1945,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/mon-repos",
     "price": "vanaf €632 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "rustiek natuursteen, rieten pergola's, geen interieur"
  },
  {
   "area": "La Riviera",
@@ -1946,7 +2010,9 @@ window.HOUSES = [
     "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/costa-brava/villa-manila-spain/",
     "price": "vanaf £2.500 / week"
    }
-  ]
+  ],
+  "modern": 3,
+  "modernNote": "glazen balustrades, stenen gevel, geen interieur"
  },
  {
   "area": "Els Pinars",
@@ -2005,7 +2071,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/rosario",
     "price": "vanaf €414 / nacht"
    }
-  ]
+  ],
+  "modern": 3,
+  "modernNote": "nette buitenkant, simpele gedateerde badkamer"
  },
  {
   "area": "Mas Mora",
@@ -2068,7 +2136,9 @@ window.HOUSES = [
     "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/blanes/villa-grace.html",
     "price": ""
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "beelden, bogen, marmer, jaren-2000 interieur"
  },
  {
   "area": "Condado del Jaruco",
@@ -2133,7 +2203,9 @@ window.HOUSES = [
     "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-madonna.html",
     "price": ""
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "balustrades, bogen, traditioneel Spaans, geen interieur"
  },
  {
   "area": "Rocca Grossa",
@@ -2196,7 +2268,9 @@ window.HOUSES = [
     "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-marysol.html",
     "price": ""
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "terracotta tegels, plastic stoelen, geen interieur"
  },
  {
   "area": "Lloret Center",
@@ -2262,7 +2336,9 @@ window.HOUSES = [
     "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-summertime.html",
     "price": ""
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "traditionele villa met balustrades, mooie tuin"
  },
  {
   "area": "Aigua Viva Park",
@@ -2317,7 +2393,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/vidreres/lara",
     "price": "vanaf €215 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "terracotta, plastic stoelen, gedateerd huis"
  },
  {
   "area": "Aigua Viva Park",
@@ -2372,7 +2450,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/vidreres/poppy",
     "price": "vanaf €152 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "baksteen, sierbetonhek, plastic tuinmeubels"
  },
  {
   "area": "Serra Brava",
@@ -2428,7 +2508,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/serra-brava",
     "price": "vanaf €57 / nacht"
    }
-  ]
+  ],
+  "modern": 1,
+  "modernNote": "zeer ouderwets interieur, grenen kasten, oude tegels"
  },
  {
   "area": "",
@@ -2451,12 +2533,12 @@ window.HOUSES = [
   "rating": null,
   "reviews": 0,
   "images": [
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1151731-01.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1151731-02.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1151731-03.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1151731-04.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1151731-05.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1151731-06.jpg"
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1151731-01.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1151731-02.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1151731-03.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1151731-04.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1151731-05.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1151731-06.jpg?lossy=1&strip=1&webp=1"
   ],
   "luxury": true,
   "price": "vanaf £6.615 / week",
@@ -2474,7 +2556,9 @@ window.HOUSES = [
     "url": "https://excellenceluxuryvillas.com/golf-nearby-rentals/catalonia/girona-region/villa-llevant-puig-de-castel-lloret-de-mar/",
     "price": "vanaf £6.615 / week"
    }
-  ]
+  ],
+  "modern": 5,
+  "modernNote": "gerenoveerd licht interieur, strak en modern"
  },
  {
   "area": "Serra Brava",
@@ -2527,7 +2611,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/celine",
     "price": "vanaf €182 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "eenvoudig, gedateerd terras, plastic ligbedden"
  },
  {
   "area": "La Montgoda",
@@ -2583,7 +2669,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/comodo",
     "price": "vanaf €272 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "jaren-90 villa, niervormig zwembad"
  },
  {
   "area": "Aigua Viva Park",
@@ -2639,7 +2727,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/cynthia",
     "price": "vanaf €256 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "bogen, balustrades, terracotta, tentframe"
  },
  {
   "area": "La Riviera",
@@ -2696,7 +2786,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/dividivi",
     "price": "vanaf €232 / nacht"
    }
-  ]
+  ],
+  "modern": 3,
+  "modernNote": "nette bungalow, grote ramen, veel terracotta"
  },
  {
   "area": "",
@@ -2752,7 +2844,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/eirene",
     "price": "vanaf €249 / nacht"
    }
-  ]
+  ],
+  "modern": 3,
+  "modernNote": "witte keuken, maar oude tegels, natuursteen"
  },
  {
   "area": "",
@@ -2805,7 +2899,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/gaudi-1",
     "price": "vanaf €327 / nacht"
    }
-  ]
+  ],
+  "modern": 3,
+  "modernNote": "veel glas, maar leren banken, 2000s"
  },
  {
   "area": "Creu de Lloret",
@@ -2863,7 +2959,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/la-cancha",
     "price": "vanaf €230 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "rustiek stenen interieur, open haard, ouderwets"
  },
  {
   "area": "",
@@ -2919,7 +3017,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/macedonia",
     "price": "vanaf €186 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "balustrades, bogen, plastic stoelen, klassiek"
  },
  {
   "area": "Lloret Blau",
@@ -2976,7 +3076,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/melosa",
     "price": "vanaf €319 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "balustrades, terracotta, rustieke buitenkeuken"
  },
  {
   "area": "Lloret Vert",
@@ -3033,7 +3135,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/nirwana",
     "price": "vanaf €320 / nacht"
    }
-  ]
+  ],
+  "modern": 3,
+  "modernNote": "rustieke stenen toren, moderne tuinmeubels"
  },
  {
   "area": "Lloret Residential",
@@ -3090,7 +3194,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/orlanda",
     "price": "vanaf €163 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "traditioneel, terracotta, balustrades, geen interieur"
  },
  {
   "area": "Lloret Residential",
@@ -3147,7 +3253,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/pablo",
     "price": "vanaf €215 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "mozaiekmuren, terracotta, gedateerd, geen interieur"
  },
  {
   "area": "Mas Altaba",
@@ -3203,7 +3311,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/macanet-de-la-selva/paris",
     "price": "vanaf €225 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "oude villa, mozaïekmuur, alleen buitenfoto's"
  },
  {
   "area": "La Riviera",
@@ -3261,7 +3371,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/rosanna",
     "price": "vanaf €143 / nacht"
    }
-  ]
+  ],
+  "modern": 3,
+  "modernNote": "glazen balustrade, stenen gevel, geen interieur"
  },
  {
   "area": "Aigua Viva Park",
@@ -3316,7 +3428,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/vidreres/tinoco",
     "price": "vanaf €152 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "grenen meubels, oude tegelvloer, gedateerd interieur"
  },
  {
   "area": "Serra Brava",
@@ -3371,7 +3485,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/trupial",
     "price": "vanaf €170 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "balustrades, terracotta, natuursteen, traditioneel"
  },
  {
   "area": "Montgoda",
@@ -3434,7 +3550,9 @@ window.HOUSES = [
     "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-estrella.html",
     "price": ""
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "jaren-90 villa, balustrades, zwanenbeelden"
  },
  {
   "area": "Serrabrava",
@@ -3466,12 +3584,12 @@ window.HOUSES = [
   "rating": null,
   "reviews": 0,
   "images": [
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-llevant-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-01.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-llevant-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-02.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-llevant-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-03.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-llevant-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-04.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-llevant-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-05.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-llevant-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-06.jpg"
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-llevant-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-01.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-llevant-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-02.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-llevant-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-03.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-llevant-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-04.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-llevant-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-05.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-llevant-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-06.jpg?lossy=1&strip=1&webp=1"
   ],
   "luxury": true,
   "price": "vanaf £1.240 / week",
@@ -3489,7 +3607,9 @@ window.HOUSES = [
     "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/lloret-de-mar/villa-llevant-lloret-lloret-de-mar/",
     "price": "vanaf £1.240 / week"
    }
-  ]
+  ],
+  "modern": 4,
+  "modernNote": "licht modern woonkamer, gele traditionele gevel"
  },
  {
   "area": "Rocca Grossa",
@@ -3552,7 +3672,9 @@ window.HOUSES = [
     "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-maribel.html",
     "price": ""
    }
-  ]
+  ],
+  "modern": 3,
+  "modernNote": "wit huis, gedateerde buitenkeuken, kunstgras"
  },
  {
   "area": "Roca Grossa",
@@ -3579,12 +3701,12 @@ window.HOUSES = [
   "rating": null,
   "reviews": 0,
   "images": [
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-roca-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-01.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-roca-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-02.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-roca-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-03.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-roca-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-04.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-roca-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-05.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-roca-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-06.jpg"
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-roca-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-01.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-roca-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-02.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-roca-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-03.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-roca-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-04.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-roca-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-05.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-roca-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-06.jpg?lossy=1&strip=1&webp=1"
   ],
   "luxury": true,
   "price": "vanaf £1.440 / week",
@@ -3602,7 +3724,9 @@ window.HOUSES = [
     "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/lloret-de-mar/villa-roca-lloret/",
     "price": "vanaf £1.440 / week"
    }
-  ]
+  ],
+  "modern": 3,
+  "modernNote": "licht interieur, maar oude tegels, simpele keuken"
  },
  {
   "area": "Mas Pallí",
@@ -3633,12 +3757,12 @@ window.HOUSES = [
   "rating": null,
   "reviews": 0,
   "images": [
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-roca-calonge-luxury-villa-rental-calonge-spain-with-private-pool-01.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-roca-calonge-luxury-villa-rental-calonge-spain-with-private-pool-02.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-roca-calonge-luxury-villa-rental-calonge-spain-with-private-pool-03.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-roca-calonge-luxury-villa-rental-calonge-spain-with-private-pool-04.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-roca-calonge-luxury-villa-rental-calonge-spain-with-private-pool-05.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-roca-calonge-luxury-villa-rental-calonge-spain-with-private-pool-06.jpg"
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-roca-calonge-luxury-villa-rental-calonge-spain-with-private-pool-01.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-roca-calonge-luxury-villa-rental-calonge-spain-with-private-pool-02.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-roca-calonge-luxury-villa-rental-calonge-spain-with-private-pool-03.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-roca-calonge-luxury-villa-rental-calonge-spain-with-private-pool-04.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-roca-calonge-luxury-villa-rental-calonge-spain-with-private-pool-05.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-roca-calonge-luxury-villa-rental-calonge-spain-with-private-pool-06.jpg?lossy=1&strip=1&webp=1"
   ],
   "luxury": true,
   "price": "vanaf £1.876 / week",
@@ -3656,7 +3780,9 @@ window.HOUSES = [
     "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/calonge/casa-roca-calonge/",
     "price": "vanaf £1.876 / week"
    }
-  ]
+  ],
+  "modern": 3,
+  "modernNote": "gerenoveerd, houten balken, degelijke keuken"
  },
  {
   "area": "Els Pinars",
@@ -3717,7 +3843,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/dance",
     "price": "vanaf €246 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "terracotta, balustrades, rustieke steenmuren"
  },
  {
   "area": "Selva Brava",
@@ -3775,7 +3903,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/llagostera/marfil",
     "price": "vanaf €135 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "lagunezwembad, maar kitscherig geel huis"
  },
  {
   "area": "Lloret Center",
@@ -3840,7 +3970,9 @@ window.HOUSES = [
     "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-dolce-vita.html",
     "price": ""
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "baksteen, balustrades, rustieke terracotta"
  },
  {
   "area": "Condado del Jaruco",
@@ -3904,7 +4036,9 @@ window.HOUSES = [
     "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-primavera.html",
     "price": ""
    }
-  ]
+  ],
+  "modern": 4,
+  "modernNote": "modern marmeren interieur, mediterrane buitenkant"
  },
  {
   "area": "de wijk Roca Grossa",
@@ -3965,7 +4099,9 @@ window.HOUSES = [
     "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-sunrise.html",
     "price": ""
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "kroonluchter, zware meubels, ouderwets interieur"
  },
  {
   "area": "Els Pinars",
@@ -4021,7 +4157,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/alicia",
     "price": "vanaf €148 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "gedateerd geel huis, flagstone terras"
  },
  {
   "area": "Roca Grossa",
@@ -4077,7 +4215,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/anais",
     "price": "vanaf €271 / nacht"
    }
-  ]
+  ],
+  "modern": 4,
+  "modernNote": "infinity pool, strak wit, geen interieur"
  },
  {
   "area": "Aigua Viva Park",
@@ -4136,7 +4276,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/vidreres/artemis",
     "price": "vanaf €181 / nacht"
    }
-  ]
+  ],
+  "modern": 3,
+  "modernNote": "fris zwembad, plastic stoelen, balustrades"
  },
  {
   "area": "",
@@ -4190,7 +4332,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/brava-azure",
     "price": "vanaf €399 / nacht"
    }
-  ]
+  ],
+  "modern": 3,
+  "modernNote": "lichte woonkamer, natuursteen, leren banken"
  },
  {
   "area": "Roca Grossa",
@@ -4248,7 +4392,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/caipirinha",
     "price": "vanaf €194 / nacht"
    }
-  ]
+  ],
+  "modern": 3,
+  "modernNote": "strak kubisch terracotta huis, pergola"
  },
  {
   "area": "Santa Cristina",
@@ -4306,7 +4452,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/calipso",
     "price": "vanaf €277 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "jaren-2000 geel huis, terracotta, balustrade"
  },
  {
   "area": "",
@@ -4334,12 +4482,12 @@ window.HOUSES = [
   "rating": null,
   "reviews": 0,
   "images": [
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-cavall-aro-luxury-villa-rental-playa-de-aro-spain-01.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-cavall-aro-luxury-villa-rental-playa-de-aro-spain-02.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-cavall-aro-luxury-villa-rental-playa-de-aro-spain-03.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-cavall-aro-luxury-villa-rental-playa-de-aro-spain-04.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-cavall-aro-luxury-villa-rental-playa-de-aro-spain-05.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-cavall-aro-luxury-villa-rental-playa-de-aro-spain-06.jpg"
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-cavall-aro-luxury-villa-rental-playa-de-aro-spain-01.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-cavall-aro-luxury-villa-rental-playa-de-aro-spain-02.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-cavall-aro-luxury-villa-rental-playa-de-aro-spain-03.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-cavall-aro-luxury-villa-rental-playa-de-aro-spain-04.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-cavall-aro-luxury-villa-rental-playa-de-aro-spain-05.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-cavall-aro-luxury-villa-rental-playa-de-aro-spain-06.jpg?lossy=1&strip=1&webp=1"
   ],
   "luxury": true,
   "price": "vanaf £1.372 / week",
@@ -4357,7 +4505,9 @@ window.HOUSES = [
     "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/spain/casa-cavall-aro/",
     "price": "vanaf £1.372 / week"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "wit gerenoveerd, maar grenen meubels binnen"
  },
  {
   "area": "Torre Valentina",
@@ -4384,12 +4534,12 @@ window.HOUSES = [
   "rating": null,
   "reviews": 0,
   "images": [
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevant-calonge-luxury-villa-rental-st-antoni-de-calonge-spain-sea-view-01.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevant-calonge-luxury-villa-rental-st-antoni-de-calonge-spain-sea-view-02.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevant-calonge-luxury-villa-rental-st-antoni-de-calonge-spain-sea-view-03.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevant-calonge-luxury-villa-rental-st-antoni-de-calonge-spain-sea-view-04.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevant-calonge-luxury-villa-rental-st-antoni-de-calonge-spain-sea-view-05.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevant-calonge-luxury-villa-rental-st-antoni-de-calonge-spain-sea-view-06.jpg"
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevant-calonge-luxury-villa-rental-st-antoni-de-calonge-spain-sea-view-01.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevant-calonge-luxury-villa-rental-st-antoni-de-calonge-spain-sea-view-02.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevant-calonge-luxury-villa-rental-st-antoni-de-calonge-spain-sea-view-03.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevant-calonge-luxury-villa-rental-st-antoni-de-calonge-spain-sea-view-04.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevant-calonge-luxury-villa-rental-st-antoni-de-calonge-spain-sea-view-05.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevant-calonge-luxury-villa-rental-st-antoni-de-calonge-spain-sea-view-06.jpg?lossy=1&strip=1&webp=1"
   ],
   "luxury": true,
   "price": "vanaf £1.487 / week",
@@ -4407,7 +4557,9 @@ window.HOUSES = [
     "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/spain/casa-llevant-calonge-st-antoni/",
     "price": "vanaf £1.487 / week"
    }
-  ]
+  ],
+  "modern": 3,
+  "modernNote": "mooi exterieur, binnen terracotta en antiek"
  },
  {
   "area": "Fenals",
@@ -4432,12 +4584,12 @@ window.HOUSES = [
   "rating": null,
   "reviews": 0,
   "images": [
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevantada-lloret-luxury-beach-house-rental-lloret-de-mar-spain-beachfront-01.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevantada-lloret-luxury-beach-house-rental-lloret-de-mar-spain-beachfront-02.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevantada-lloret-luxury-beach-house-rental-lloret-de-mar-spain-beachfront-03.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevantada-lloret-luxury-beach-house-rental-lloret-de-mar-spain-beachfront-04.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevantada-lloret-luxury-beach-house-rental-lloret-de-mar-spain-beachfront-05.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevantada-lloret-luxury-beach-house-rental-lloret-de-mar-spain-beachfront-06.jpg"
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevantada-lloret-luxury-beach-house-rental-lloret-de-mar-spain-beachfront-01.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevantada-lloret-luxury-beach-house-rental-lloret-de-mar-spain-beachfront-02.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevantada-lloret-luxury-beach-house-rental-lloret-de-mar-spain-beachfront-03.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevantada-lloret-luxury-beach-house-rental-lloret-de-mar-spain-beachfront-04.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevantada-lloret-luxury-beach-house-rental-lloret-de-mar-spain-beachfront-05.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevantada-lloret-luxury-beach-house-rental-lloret-de-mar-spain-beachfront-06.jpg?lossy=1&strip=1&webp=1"
   ],
   "luxury": true,
   "price": "vanaf £928 / week",
@@ -4455,7 +4607,9 @@ window.HOUSES = [
     "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/lloret-de-mar/casa-llevantada-lloret-de-mar/",
     "price": "vanaf £928 / week"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "gedateerd appartement, kroonluchter, oud meubilair"
  },
  {
   "area": "",
@@ -4483,12 +4637,12 @@ window.HOUSES = [
   "rating": null,
   "reviews": 0,
   "images": [
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-tramuntana-lloret-luxury-5-bedroom-apartment-with-ocean-views-and-sauna-lloret-de-mar-01.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-tramuntana-lloret-luxury-5-bedroom-apartment-with-ocean-views-and-sauna-lloret-de-mar-02.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-tramuntana-lloret-luxury-5-bedroom-apartment-with-ocean-views-and-sauna-lloret-de-mar-03.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-tramuntana-lloret-luxury-5-bedroom-apartment-with-ocean-views-and-sauna-lloret-de-mar-04.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-tramuntana-lloret-luxury-5-bedroom-apartment-with-ocean-views-and-sauna-lloret-de-mar-05.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-tramuntana-lloret-luxury-5-bedroom-apartment-with-ocean-views-and-sauna-lloret-de-mar-06.jpg"
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-tramuntana-lloret-luxury-5-bedroom-apartment-with-ocean-views-and-sauna-lloret-de-mar-01.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-tramuntana-lloret-luxury-5-bedroom-apartment-with-ocean-views-and-sauna-lloret-de-mar-02.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-tramuntana-lloret-luxury-5-bedroom-apartment-with-ocean-views-and-sauna-lloret-de-mar-03.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-tramuntana-lloret-luxury-5-bedroom-apartment-with-ocean-views-and-sauna-lloret-de-mar-04.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-tramuntana-lloret-luxury-5-bedroom-apartment-with-ocean-views-and-sauna-lloret-de-mar-05.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-tramuntana-lloret-luxury-5-bedroom-apartment-with-ocean-views-and-sauna-lloret-de-mar-06.jpg?lossy=1&strip=1&webp=1"
   ],
   "luxury": true,
   "price": "vanaf £5.887 / week",
@@ -4506,7 +4660,9 @@ window.HOUSES = [
     "url": "https://excellenceluxuryvillas.com/townhouse-apartment-rentals/catalonia/girona-region/casa-tramuntana-lloret/",
     "price": "vanaf £5.887 / week"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "rustieke bar, mozaiekbadkamer, dakzwembad"
  },
  {
   "area": "Santa Maria de Llorell",
@@ -4564,7 +4720,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/tossa-de-mar/cliper",
     "price": "vanaf €231 / nacht"
    }
-  ]
+  ],
+  "modern": 3,
+  "modernNote": "kunstgras, rieten parasols, houten pergola"
  },
  {
   "area": "Serra Brava",
@@ -4622,7 +4780,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/cobre",
     "price": "vanaf €50 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "jaren-90 mediterrane villa, flagstone"
  },
  {
   "area": "Aigua Viva Park",
@@ -4678,7 +4838,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/darwin",
     "price": "vanaf €121 / nacht"
    }
-  ]
+  ],
+  "modern": 1,
+  "modernNote": "groen geverfd beton, sleets huis"
  },
  {
   "area": "-",
@@ -4735,7 +4897,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/playa-d-aro/doix",
     "price": "vanaf €173 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "rustiek, houten reling, wel jacuzzi"
  },
  {
   "area": "",
@@ -4791,7 +4955,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/blanes/dorothy",
     "price": "vanaf €201 / nacht"
    }
-  ]
+  ],
+  "modern": 3,
+  "modernNote": "nette baksteen-hout villa, jaren 2000"
  },
  {
   "area": "Parc dels Princeps",
@@ -4847,7 +5013,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-maresme/fogars-de-la-selva/eclipse",
     "price": "vanaf €262 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "jaren-90 huis, betonbalustrades, terracotta terras"
  },
  {
   "area": "Serra Brava",
@@ -4907,7 +5075,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/emerald",
     "price": "vanaf €460 / nacht"
    }
-  ]
+  ],
+  "modern": 3,
+  "modernNote": "nieuw composiet zwembaddek, standaard oudere villa"
  },
  {
   "area": "La Montgoda",
@@ -4965,7 +5135,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/fedora",
     "price": "vanaf €412 / nacht"
    }
-  ]
+  ],
+  "modern": 3,
+  "modernNote": "strak zwembad met daybeds, traditioneel huis"
  },
  {
   "area": "",
@@ -4995,12 +5167,12 @@ window.HOUSES = [
   "rating": null,
   "reviews": 0,
   "images": [
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/finca-tramuntana-malavella-luxury-villa-rental-caldes-de-malavella-spain-with-private-pool-01.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/finca-tramuntana-malavella-luxury-villa-rental-caldes-de-malavella-spain-with-private-pool-02.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/finca-tramuntana-malavella-luxury-villa-rental-caldes-de-malavella-spain-with-private-pool-03.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/finca-tramuntana-malavella-luxury-villa-rental-caldes-de-malavella-spain-with-private-pool-04.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/finca-tramuntana-malavella-luxury-villa-rental-caldes-de-malavella-spain-with-private-pool-05.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/finca-tramuntana-malavella-luxury-villa-rental-caldes-de-malavella-spain-with-private-pool-06.jpg"
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/finca-tramuntana-malavella-luxury-villa-rental-caldes-de-malavella-spain-with-private-pool-01.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/finca-tramuntana-malavella-luxury-villa-rental-caldes-de-malavella-spain-with-private-pool-02.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/finca-tramuntana-malavella-luxury-villa-rental-caldes-de-malavella-spain-with-private-pool-03.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/finca-tramuntana-malavella-luxury-villa-rental-caldes-de-malavella-spain-with-private-pool-04.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/finca-tramuntana-malavella-luxury-villa-rental-caldes-de-malavella-spain-with-private-pool-05.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/finca-tramuntana-malavella-luxury-villa-rental-caldes-de-malavella-spain-with-private-pool-06.jpg?lossy=1&strip=1&webp=1"
   ],
   "luxury": true,
   "price": "vanaf £906 / week",
@@ -5018,7 +5190,9 @@ window.HOUSES = [
     "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/caldes-de-malavella/finca-tramuntana-malavella/",
     "price": "vanaf £906 / week"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "rustieke stenen pilaren, terracotta tegels"
  },
  {
   "area": "Lloret Blau",
@@ -5075,7 +5249,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/gemma",
     "price": "vanaf €138 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "niervormig zwembad, natuursteen muren, oud huis"
  },
  {
   "area": "Lloret Residential",
@@ -5130,7 +5306,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/jocelyne",
     "price": "vanaf €115 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "gele traditionele villa, terracotta, rotan meubels"
  },
  {
   "area": "Mas Altaba",
@@ -5185,7 +5363,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/macanet-de-la-selva/juliana",
     "price": "vanaf €236 / nacht"
    }
-  ]
+  ],
+  "modern": 3,
+  "modernNote": "nieuw zwembad, feesttent, gedateerde bungalow"
  },
  {
   "area": "Center",
@@ -5243,7 +5423,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/sant-feliu-de-guixols/la-gamba",
     "price": "vanaf €240 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "overdekt zwembad, stenen bogen, houten kozijnen"
  },
  {
   "area": "Canyelles",
@@ -5300,7 +5482,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/lampione",
     "price": "vanaf €152 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "jaren-90 villa, balustrades, roze zuilen"
  },
  {
   "area": "Montbarbat",
@@ -5356,7 +5540,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/macanet-de-la-selva/maria-magdalena",
     "price": "vanaf €215 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "rode bakstenen huis, terracotta, klassieke tuinstoelen"
  },
  {
   "area": "",
@@ -5413,7 +5599,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/macanet-de-la-selva/masia-can-vilar",
     "price": "vanaf €215 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "rustieke stenen masia, opzetzwembad"
  },
  {
   "area": "Serra Brava",
@@ -5470,7 +5658,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/miriamar",
     "price": "vanaf €100 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "gedateerd bakstenen huis, plastic tuinmeubels"
  },
  {
   "area": "Montbarbat",
@@ -5528,7 +5718,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/macanet-de-la-selva/palmora",
     "price": "vanaf €200 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "oud rood bakstenen huis, nieuw zwembad"
  },
  {
   "area": "La Montgoda",
@@ -5592,7 +5784,9 @@ window.HOUSES = [
     "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/lloret-de-mar/villa-levante-lloret-de-mar/",
     "price": "vanaf £1.107 / week"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "jaren-90 witte villa, plastic stoelen"
  },
  {
   "area": "Aigua Viva Park",
@@ -5649,7 +5843,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/vidreres/refugio",
     "price": "vanaf €215 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "gedateerd bakstenen huis, rustiek prieel"
  },
  {
   "area": "Macanet Residencial Parc",
@@ -5707,7 +5903,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/macanet-de-la-selva/residencial-park",
     "price": "vanaf €147 / nacht"
    }
-  ]
+  ],
+  "modern": 3,
+  "modernNote": "gemengd: moderne lounge, kitscherige details"
  },
  {
   "area": "",
@@ -5757,7 +5955,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/solario",
     "price": "vanaf €196 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "terracotta vloer, rode keuken, donker hout"
  },
  {
   "area": "Font de Sant Llorenc",
@@ -5820,7 +6020,9 @@ window.HOUSES = [
     "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-alba.html",
     "price": ""
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "rustiek baksteen, nep-rotswaterval"
  },
  {
   "area": "Fenals",
@@ -5883,7 +6085,9 @@ window.HOUSES = [
     "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-baileys.html",
     "price": ""
    }
-  ]
+  ],
+  "modern": 3,
+  "modernNote": "klassieke villa met balustrades, goed onderhouden"
  },
  {
   "area": "Rocca Grossa",
@@ -5949,7 +6153,9 @@ window.HOUSES = [
     "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/blanes/villa-ibiza.html",
     "price": ""
    }
-  ]
+  ],
+  "modern": 3,
+  "modernNote": "klassieke mediterrane villa, fris onderhouden"
  },
  {
   "area": "Canyelles",
@@ -6029,7 +6235,9 @@ window.HOUSES = [
     "url": "https://www.villanovo.com/villa-rentals/europe/spain/costa-brava/lloret-de-mar/villa-klem",
     "price": "vanaf €656 / nacht"
    }
-  ]
+  ],
+  "modern": 3,
+  "modernNote": "blauw glas en natuursteen, wat gedateerd"
  },
  {
   "area": "",
@@ -6072,7 +6280,9 @@ window.HOUSES = [
     "url": "https://www.villanovo.com/villa-rentals/europe/spain/costa-brava/sant-antoni-de-calonge/villa-mere",
     "price": "vanaf €452 / nacht"
    }
-  ]
+  ],
+  "modern": 5,
+  "modernNote": "architectonisch, glas en strak minimalistisch"
  },
  {
   "area": "Rocca Grossa",
@@ -6142,7 +6352,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/briana",
     "price": "vanaf €71 / nacht"
    }
-  ]
+  ],
+  "modern": 3,
+  "modernNote": "klassieke villa, nette pergola en tuin"
  },
  {
   "area": "Lloret Blau",
@@ -6206,7 +6418,9 @@ window.HOUSES = [
     "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-sofia.html",
     "price": ""
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "oudere witte villa, terracotta, rustiek"
  },
  {
   "area": "",
@@ -6234,12 +6448,12 @@ window.HOUSES = [
   "rating": null,
   "reviews": 0,
   "images": [
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-tramuntana-tossa-luxury-villa-rental-tossa-de-mar-spain-with-private-pool-01.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-tramuntana-tossa-luxury-villa-rental-tossa-de-mar-spain-with-private-pool-02.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-tramuntana-tossa-luxury-villa-rental-tossa-de-mar-spain-with-private-pool-03.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-tramuntana-tossa-luxury-villa-rental-tossa-de-mar-spain-with-private-pool-04.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-tramuntana-tossa-luxury-villa-rental-tossa-de-mar-spain-with-private-pool-05.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-tramuntana-tossa-luxury-villa-rental-tossa-de-mar-spain-with-private-pool-06.jpg"
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-tramuntana-tossa-luxury-villa-rental-tossa-de-mar-spain-with-private-pool-01.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-tramuntana-tossa-luxury-villa-rental-tossa-de-mar-spain-with-private-pool-02.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-tramuntana-tossa-luxury-villa-rental-tossa-de-mar-spain-with-private-pool-03.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-tramuntana-tossa-luxury-villa-rental-tossa-de-mar-spain-with-private-pool-04.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-tramuntana-tossa-luxury-villa-rental-tossa-de-mar-spain-with-private-pool-05.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-tramuntana-tossa-luxury-villa-rental-tossa-de-mar-spain-with-private-pool-06.jpg?lossy=1&strip=1&webp=1"
   ],
   "luxury": true,
   "price": "vanaf £1.862 / week",
@@ -6262,7 +6476,9 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/tossa-de-mar/palmar",
     "price": "vanaf €317 / nacht"
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "rustiek: baksteen, terracotta, stenen muren"
  },
  {
   "area": "Lloret Dalt",
@@ -6326,7 +6542,9 @@ window.HOUSES = [
     "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-valentina.html",
     "price": ""
    }
-  ]
+  ],
+  "modern": 2,
+  "modernNote": "jaren-90 gebouw, terracotta tegels"
  },
  {
   "area": "",
@@ -6349,12 +6567,12 @@ window.HOUSES = [
   "rating": null,
   "reviews": 0,
   "images": [
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2023/11/Villa-Vines-Spain-1170x698.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2023/11/Villa-Vines-Spain-18.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2023/11/Villa-Vines-Spain-19.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2023/11/Villa-Vines-Spain-20.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2023/11/Villa-Vines-Spain-21.jpg",
-   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2023/11/Villa-Vines-Spain.jpg"
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2023/11/Villa-Vines-Spain-1170x698.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2023/11/Villa-Vines-Spain-18.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2023/11/Villa-Vines-Spain-19.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2023/11/Villa-Vines-Spain-20.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2023/11/Villa-Vines-Spain-21.jpg?lossy=1&strip=1&webp=1",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2023/11/Villa-Vines-Spain.jpg?lossy=1&strip=1&webp=1"
   ],
   "luxury": true,
   "price": "vanaf £7.355 / week",
@@ -6372,7 +6590,9 @@ window.HOUSES = [
     "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/costa-brava/villa-vines-spain/",
     "price": "vanaf £7.355 / week"
    }
-  ]
+  ],
+  "modern": 5,
+  "modernNote": "strak designzwembad, minimalistisch wit interieur"
  },
  {
   "area": "Aigua Viva Park",
@@ -6430,6 +6650,8 @@ window.HOUSES = [
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/vidreres/watamula",
     "price": "vanaf €198 / nacht"
    }
-  ]
+  ],
+  "modern": 4,
+  "modernNote": "moderne witte kubusvilla, wat oude tegels"
  }
 ];

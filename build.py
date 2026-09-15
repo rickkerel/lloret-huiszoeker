@@ -114,11 +114,26 @@ def main():
     for h in houses:
         h["personsMax"] = h["personsMax"] or h["persons"]
         h["town"] = TOWN_NAMES.get(h["town"].lower(), h["town"])
+        # De CDN van Excellence geeft zonder deze parameters een "hotlinked"-plaatje in plaats van de foto
+        h["images"] = [i + ("&" if "?" in i else "?") + "lossy=1&strip=1&webp=1"
+                       if "assetcdn.net" in i and "lossy=" not in i else i for i in h["images"]]
         # Sommige bureaus plakken plaats/land achter de huisnaam ("Villa X Lloret de Mar 2", "Villa Y Spain")
         name = re.sub(rf"\s+{re.escape(h['town'])}(?=(\s+\d+)?$)", "", h["name"], flags=re.I)
         h["name"] = re.sub(r"\s+Spain$", "", name).strip(" -,") or h["name"]
     merged = merge(houses)
     merged.sort(key=lambda h: (-(h["persons"] or 0), h["name"]))
+
+    # Stijlscore (1-5, "modern & fris") uit de fotobeoordeling. De tweede ronde (scores2-*, alle 6 foto's)
+    # overschrijft de eerste ronde (scores-*, alleen 3 foto's).
+    photo_scores = {}
+    for pattern in ("scores-*.json", "scores2-*.json"):
+        for f in sorted((CACHE / "photos").glob(pattern)):
+            photo_scores.update(json.loads(f.read_text()))
+    for h in merged:
+        s = photo_scores.get(h["id"]) or {}
+        h["modern"] = s.get("score")
+        h["modernNote"] = s.get("note", "")
+    print(f"stijlscore voor {sum(1 for h in merged if h['modern'])} van {len(merged)} huizen")
 
     (ROOT / "data.js").write_text(
         "// Gegenereerd door build.py op " + time.strftime("%Y-%m-%d %H:%M") + "\n"
