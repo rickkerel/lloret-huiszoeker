@@ -9,87 +9,157 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --sea: #0b4f6c; --sun: #ff7a3d; --ink: #17202a; --muted: #6b7684;
+    --sun: #ff7a3d; --gold: #c9a24a; --ink: #17202a; --muted: #6b7684;
     --line: #e7e9ec; --bg: #f6f6f4; --ok: #2f9e6b; --warn: #c7771f; --bad: #c4453c;
+    --radius: 12px;
   }
   * { box-sizing: border-box; }
-  html, body { margin: 0; height: 100%; font-family: Inter, system-ui, sans-serif; color: var(--ink); background: var(--bg); }
+  html, body { margin: 0; height: 100%; font-family: Inter, system-ui, sans-serif; color: var(--ink); background: var(--bg); -webkit-font-smoothing: antialiased; }
+  button { font: inherit; color: inherit; }
+  a { color: inherit; }
   .app { display: grid; grid-template-columns: 440px 1fr; height: 100vh; height: 100dvh; }
 
-  aside { display: flex; flex-direction: column; min-height: 0; background: #fff; border-right: 1px solid var(--line); }
-  header { padding: 18px 20px 12px; }
+  /* ---------- Zijbalk ---------- */
+  aside { min-height: 0; overflow-y: auto; background: #fff; border-right: 1px solid var(--line); }
+  header { padding: 18px 20px 14px; }
   header h1 { font-family: "Bricolage Grotesque", sans-serif; font-weight: 800; font-size: 24px; margin: 0; letter-spacing: -.5px; }
   header h1 span { color: var(--sun); }
   header p { margin: 2px 0 0; font-size: 13px; color: var(--muted); }
 
-  .filters { padding: 0 20px 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; border-bottom: 1px solid var(--line); max-height: 58vh; overflow-y: auto; }
+  .filters { padding: 0 20px 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 10px; }
   .full { grid-column: 1 / -1; }
-  .filters label { font-size: 11px; font-weight: 600; color: var(--muted); display: flex; flex-direction: column; gap: 4px; }
-  input[type=search], input[type=number], select {
-    font: inherit; font-size: 14px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); width: 100%;
+  .field { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+  .field > span { font-size: 11px; font-weight: 600; color: var(--muted); }
+  .control {
+    height: 40px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg);
+    display: flex; align-items: center; transition: border-color .15s, background .15s;
   }
-  input:focus, select:focus { outline: 2px solid var(--ink); outline-offset: -1px; }
-  summary { cursor: pointer; font-size: 13px; font-weight: 600; padding: 4px 0; list-style: none; display: flex; gap: 8px; align-items: center; }
+  .control:hover { border-color: #cfd4da; background: #fff; }
+
+  .search { padding: 0 12px; gap: 8px; cursor: text; }
+  .search svg { flex: none; color: var(--muted); }
+  .search input { border: 0; outline: 0; background: none; font: inherit; font-size: 14px; width: 100%; color: var(--ink); -webkit-appearance: none; appearance: none; }
+  .search:focus-within { border-color: var(--ink); background: #fff; }
+
+  .stepper { justify-content: space-between; padding: 0 4px; }
+  .stepper button {
+    width: 32px; height: 32px; border: 0; border-radius: 9px; background: #fff; cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0,0,0,.1); font-size: 18px; line-height: 1; display: grid; place-items: center;
+    transition: background .12s, color .12s;
+  }
+  .stepper button:hover { background: var(--ink); color: #fff; }
+  .stepper output { font-weight: 700; font-size: 15px; }
+
+  .dd { position: relative; }
+  .dd > .control { width: 100%; padding: 0 10px 0 12px; justify-content: space-between; gap: 6px; cursor: pointer; font-size: 14px; font-weight: 500; text-align: left; }
+  .dd > .control span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .dd > .control svg { flex: none; color: var(--muted); transition: transform .15s; }
+  .dd.open > .control { border-color: var(--ink); background: #fff; }
+  .dd.open > .control svg { transform: rotate(180deg); }
+  .dd-menu {
+    position: absolute; z-index: 1000; top: calc(100% + 6px); left: 0; min-width: 100%; width: max-content; max-width: 260px;
+    background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 14px 34px rgba(0,0,0,.15);
+    padding: 5px; display: none; max-height: 290px; overflow-y: auto;
+  }
+  .field:nth-child(odd of .field) .dd-menu { left: auto; right: 0; }
+  .dd.open .dd-menu { display: block; animation: pop .12s ease-out; }
+  @keyframes pop { from { opacity: 0; transform: translateY(-4px); } }
+  .dd-opt { display: flex; width: 100%; gap: 16px; justify-content: space-between; align-items: center; border: 0; background: none; padding: 8px 10px; border-radius: 8px; cursor: pointer; font-size: 14px; text-align: left; }
+  .dd-opt:hover { background: var(--bg); }
+  .dd-opt.on { font-weight: 600; }
+  .dd-opt.on::after { content: '✓'; color: var(--sun); }
+
+  summary { cursor: pointer; font-size: 11px; font-weight: 600; color: var(--muted); list-style: none; display: flex; gap: 6px; align-items: center; user-select: none; }
   summary::-webkit-details-marker { display: none; }
-  summary::before { content: '▸'; color: var(--muted); }
-  details[open] summary::before { content: '▾'; }
-  summary em { font-style: normal; font-weight: 500; color: var(--sun); }
+  summary::after { content: ''; width: 6px; height: 6px; border-right: 1.5px solid; border-bottom: 1.5px solid; transform: rotate(45deg) translateY(-2px); margin-left: 2px; }
+  details[open] summary::after { transform: rotate(-135deg) translateY(-1px); }
+  summary em { font-style: normal; color: var(--sun); }
   .chips { display: flex; flex-wrap: wrap; gap: 6px; }
   details .chips { margin-top: 8px; }
-  .chip { font: inherit; font-size: 12.5px; padding: 6px 10px; border-radius: 999px; border: 1px solid var(--line); background: #fff; color: var(--ink); cursor: pointer; }
+  .chip { font-size: 12.5px; padding: 6px 11px; border-radius: 999px; border: 1px solid var(--line); background: #fff; cursor: pointer; transition: border-color .12s; }
   .chip small { color: var(--muted); margin-left: 5px; font-size: 11px; }
   .chip:hover:not(:disabled) { border-color: var(--ink); }
   .chip.on { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .chip.on small { color: #c5cbd2; }
+  .chip.gold.on { background: var(--gold); border-color: var(--gold); }
   .chip:disabled { opacity: .35; cursor: default; }
 
-  .bar { padding: 8px 20px; font-size: 13px; color: var(--muted); display: flex; justify-content: space-between; gap: 12px; }
+  .bar {
+    position: sticky; top: 0; z-index: 5; padding: 10px 20px; font-size: 13px; color: var(--muted);
+    display: flex; justify-content: space-between; gap: 12px;
+    background: rgba(255,255,255,.92); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  }
   .bar a { color: var(--ink); font-weight: 600; text-decoration: none; }
   .bar a:hover { text-decoration: underline; }
 
-  .list { overflow-y: auto; padding: 0 12px 20px; flex: 1; background: var(--bg); }
-  .card { display: grid; grid-template-columns: 112px 1fr; gap: 12px; padding: 10px; border-radius: 14px; cursor: pointer; margin-top: 8px; background: #fff; border: 1px solid var(--line); }
+  .list { padding: 10px 12px 24px; background: var(--bg); min-height: 60vh; }
+  .ext { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); padding: 0 4px 2px; }
+  .ext a { text-decoration: none; font-weight: 600; color: var(--ink); background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px; }
+  .ext a:hover { border-color: var(--ink); }
+  .card { display: grid; grid-template-columns: 112px 1fr; gap: 12px; padding: 10px; border-radius: 14px; cursor: pointer; margin-top: 8px; background: #fff; border: 1px solid var(--line); transition: border-color .12s; }
   .card:hover, .card.active { border-color: var(--ink); }
-  .card img { width: 112px; height: 84px; object-fit: cover; border-radius: 10px; background: var(--line); }
+  .card img { width: 112px; height: 96px; object-fit: cover; border-radius: 10px; background: var(--line); }
   .card h3 { margin: 0 0 2px; font-size: 15px; font-weight: 700; display: flex; justify-content: space-between; gap: 6px; }
   .star { background: none; border: 0; font-size: 18px; cursor: pointer; padding: 0; line-height: 1; color: #d0d4d9; }
   .star.on { color: var(--sun); }
   .meta { font-size: 12.5px; color: var(--muted); line-height: 1.55; }
   .meta b { color: var(--ink); font-weight: 600; }
+  .meta .src { color: var(--ink); }
   .tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 1px 7px; border-radius: 999px; margin: 4px 3px 0 0; background: #f0f2f4; color: var(--muted); }
   .tag.ok { background: #e3f4ec; color: var(--ok); }
   .tag.warn { background: #fbefe0; color: var(--warn); }
   .tag.bad { background: #f8e3e1; color: var(--bad); }
+  .tag.lux { background: #f6eed9; color: #94701f; }
 
-  #map { height: 100%; background: #f2f1ee; }
+  /* ---------- Kaart ---------- */
+  #map { height: 100%; background: #1d2a2f; }
   .leaflet-div-icon { background: none; border: none; }
   .pin {
     position: absolute; transform: translate(-50%, -50%); background: #fff; color: var(--ink);
     font: 700 12px Inter, sans-serif; border-radius: 999px; padding: 4px 9px; white-space: nowrap;
-    box-shadow: 0 1px 2px rgba(0,0,0,.14), 0 3px 10px rgba(0,0,0,.12); transition: transform .12s;
+    box-shadow: 0 1px 2px rgba(0,0,0,.2), 0 3px 12px rgba(0,0,0,.25); transition: transform .12s;
   }
   .pin:hover { transform: translate(-50%, -50%) scale(1.08); }
+  .pin.lux::before { content: '◆'; color: var(--gold); font-size: 9px; margin-right: 4px; vertical-align: 1px; }
   .pin.fav { background: var(--sun); color: #fff; }
+  .pin.fav.lux::before { color: #fff; }
   .pin.active { background: var(--ink); color: #fff; transform: translate(-50%, -50%) scale(1.15); }
-  .place { position: absolute; transform: translate(-50%, -50%); font: 600 11px Inter, sans-serif; color: var(--sea); white-space: nowrap; text-shadow: 0 0 3px #fff, 0 0 3px #fff; }
-  .leaflet-control-zoom a { border-radius: 10px !important; }
+  .place { position: absolute; transform: translate(-50%, -50%); font: 600 11px Inter, sans-serif; color: #0b4f6c; white-space: nowrap; text-shadow: 0 0 3px #fff, 0 0 3px #fff; }
+  .is-sat .place { color: #fff; text-shadow: 0 1px 4px rgba(0,0,0,.9); }
 
-  .leaflet-popup-content-wrapper { border-radius: 14px; box-shadow: 0 6px 24px rgba(0,0,0,.18); }
+  .seg { display: flex; background: #fff; border-radius: 12px; padding: 3px; box-shadow: 0 2px 10px rgba(0,0,0,.2); }
+  .seg button { border: 0; background: none; padding: 7px 12px; border-radius: 9px; font-weight: 600; font-size: 13px; cursor: pointer; }
+  .seg button.on { background: var(--ink); color: #fff; }
+  .leaflet-bar { border: 0 !important; border-radius: 12px !important; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,.2) !important; }
+  .leaflet-bar a { width: 36px !important; height: 36px !important; line-height: 36px !important; color: var(--ink) !important; border-color: var(--line) !important; }
+  .leaflet-control-attribution { font-size: 10px; }
+
+  .leaflet-popup-content-wrapper { border-radius: 14px; box-shadow: 0 8px 28px rgba(0,0,0,.25); }
   .leaflet-popup-content { margin: 10px; }
-  .popup { width: 272px; font-family: Inter, sans-serif; }
-  .popup .gallery { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 4px; border-radius: 10px; }
-  .popup .gallery img { width: 272px; height: 153px; object-fit: cover; flex: none; scroll-snap-align: start; }
+  .popup { width: 276px; font-family: Inter, sans-serif; }
+  .popup .gallery { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 4px; border-radius: 10px; scrollbar-width: none; }
+  .popup .gallery img { width: 276px; height: 155px; object-fit: cover; flex: none; scroll-snap-align: start; background: var(--line); }
   .popup h4 { font-size: 16px; margin: 8px 0 2px; }
   .popup .grid { display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; font-size: 12px; margin: 8px 0 4px; }
   .popup .grid span:nth-child(odd) { color: var(--muted); }
-  .popup .btn { display: block; text-align: center; margin-top: 10px; padding: 9px; border-radius: 10px; background: var(--ink); color: #fff !important; text-decoration: none; font-weight: 600; }
+  .popup .offers { display: grid; gap: 6px; margin-top: 10px; }
+  .popup .btn {
+    display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 9px 12px; border-radius: 10px;
+    background: var(--ink); color: #fff !important; text-decoration: none; font-weight: 600; font-size: 13px;
+  }
+  .popup .btn small { font-weight: 500; opacity: .75; }
+  .popup .btn.ghost { background: #fff; color: var(--ink) !important; border: 1px solid var(--line); }
+  .popup .btn.ghost:hover { border-color: var(--ink); }
 
   @media (max-width: 800px) {
     .app { grid-template-columns: 1fr; grid-template-rows: 42vh 1fr; }
-    aside { order: 2; border-right: 0; min-height: 0; }
+    aside { order: 2; border-right: 0; }
     #map { order: 1; }
-    header { padding: 12px 14px 8px; }
+    header { padding: 12px 14px 10px; }
     header h1 { font-size: 20px; }
-    .filters { padding: 0 14px 10px; max-height: 32vh; }
+    .filters { padding: 0 14px 14px; }
+    .bar { padding: 10px 14px; }
   }
 </style>
 </head>
@@ -98,53 +168,32 @@
   <aside>
     <header>
       <h1>Lloret <span>Huiszoeker</span></h1>
-      <p>24 – 31 juli · villa's van CostaCabana</p>
+      <p>24 – 31 juli · villa's van meerdere aanbieders</p>
     </header>
     <div class="filters">
-      <label class="full">Zoeken
-        <input type="search" id="q" placeholder="Naam of wijk, bijv. Fenals">
+      <label class="field full"><span>Zoeken</span>
+        <div class="control search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input id="q" type="text" placeholder="Naam, wijk of plaats" autocomplete="off" spellcheck="false">
+        </div>
       </label>
-      <label>Min. personen
-        <input type="number" id="persons" value="12" min="1" max="40">
-      </label>
-      <label>Sorteren
-        <select id="sort">
-          <option value="persons">Meeste personen</option>
-          <option value="beach">Dichtst bij strand</option>
-          <option value="nightlife">Dichtst bij uitgaan</option>
-          <option value="rating">Beste beoordeling</option>
-          <option value="privacy">Meeste privacy</option>
-          <option value="bedrooms">Meeste slaapkamers</option>
-        </select>
-      </label>
-      <label>Plaats
-        <select id="town"><option value="">Alle plaatsen</option></select>
-      </label>
-      <label>Groepsbeleid
-        <select id="groups">
-          <option value="friends">Vriendengroep mag</option>
-          <option value="">Alles tonen</option>
-        </select>
-      </label>
-      <label>Max. afstand strand
-        <select id="maxBeach">
-          <option value="">Maakt niet uit</option>
-          <option value="500">500 m</option>
-          <option value="1000">1 km</option>
-          <option value="2000">2 km</option>
-          <option value="3000">3 km</option>
-        </select>
-      </label>
-      <label>Max. afstand uitgaan
-        <select id="maxNight">
-          <option value="">Maakt niet uit</option>
-          <option value="500">500 m</option>
-          <option value="1000">1 km</option>
-          <option value="2000">2 km</option>
-          <option value="3000">3 km</option>
-        </select>
-      </label>
+      <div class="field"><span>Personen (min.)</span>
+        <div class="control stepper" id="stepper">
+          <button type="button" data-step="-1" aria-label="Minder personen">−</button>
+          <output id="persons">12</output>
+          <button type="button" data-step="1" aria-label="Meer personen">+</button>
+        </div>
+      </div>
+      <div class="field"><span>Sorteren</span><div class="dd" id="sort"></div></div>
+      <div class="field"><span>Plaats</span><div class="dd" id="town"></div></div>
+      <div class="field"><span>Groepsbeleid</span><div class="dd" id="groups"></div></div>
+      <div class="field"><span>Max. tot strand</span><div class="dd" id="maxBeach"></div></div>
+      <div class="field"><span>Max. tot uitgaan</span><div class="dd" id="maxNight"></div></div>
       <div class="full chips" id="options"></div>
+      <details class="full" open>
+        <summary>Aanbieders</summary>
+        <div class="chips" id="sources"></div>
+      </details>
       <details class="full" open>
         <summary>Voorzieningen <em id="activeCount"></em></summary>
         <div class="chips" id="chips"></div>
@@ -154,7 +203,10 @@
       <span id="count"></span>
       <span><a href="#" id="reset">Reset</a> · <a href="#" id="share">Deel favorieten</a></span>
     </div>
-    <div class="list" id="list"></div>
+    <div class="list">
+      <div class="ext" id="ext"></div>
+      <div id="list"></div>
+    </div>
   </aside>
   <div id="map"></div>
 </div>
@@ -163,10 +215,17 @@
 <script src="data.js"></script>
 <script>
 const CARTO_KEY = 'cb1_3m37_1_94fd0036e892ecc35d0d9953';
-const BEACH = [41.6977, 2.8460];   // Platja de Lloret (midden)
+const TRIP = { checkin: '2027-07-24', checkout: '2027-07-31' };
 const FAV_KEY = 'lloret-favs';
+const LAYER_KEY = 'lloret-layer';
 
-const OPTIONS = { extra: 'Extra bedden meetellen', favs: 'Alleen favorieten' };
+// Stranden voor een hemelsbrede schatting als de aanbieder zelf geen afstand noemt
+const BEACHES = [
+  [41.6977, 2.8460], [41.6936, 2.8178], [41.6865, 2.8045], [41.7058, 2.8762], [41.7185, 2.9325],
+  [41.6720, 2.7920], [41.7790, 3.0300], [41.6380, 2.7110], [41.6130, 2.6620],
+];
+
+const OPTIONS = { lux: 'Alleen luxe', extra: 'Extra bedden meetellen', favs: 'Alleen favorieten' };
 const FEATURES = {
   privatePool: 'Privézwembad',
   poolPrivate: 'Zwembad niet inkijkbaar',
@@ -184,31 +243,49 @@ const FEATURES = {
   dishwasher: 'Vaatwasser',
   safe: 'Kluis',
 };
+const SORTS = {
+  persons: ['Meeste personen', (a, b) => b.persons - a.persons || a.beachM - b.beachM],
+  beach: ['Dichtst bij strand', (a, b) => a.beachM - b.beachM],
+  nightlife: ['Dichtst bij uitgaan', (a, b) => (a.nightM ?? 1e9) - (b.nightM ?? 1e9)],
+  rating: ['Beste beoordeling', (a, b) => (b.rating || 0) - (a.rating || 0) || b.reviews - a.reviews],
+  privacy: ['Meeste privacy', (a, b) => (b.scores.privacy || 0) - (a.scores.privacy || 0)],
+  bedrooms: ['Meeste slaapkamers', (a, b) => (b.bedrooms || 0) - (a.bedrooms || 0)],
+};
+const DISTANCES = [['', 'Maakt niet uit'], ['500', '500 m'], ['1000', '1 km'], ['2000', '2 km'], ['3000', '3 km'], ['5000', '5 km']];
+const GROUPS = [['friends', 'Vriendengroep mag'], ['', 'Alles tonen']];
+const DEFAULTS = { q: '', persons: 12, sort: 'persons', town: '', groups: 'friends', maxBeach: '', maxNight: '' };
+const CHEVRON = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>';
 
 const $ = s => document.querySelector(s);
-const state = { extra: false, favs: false, need: new Set(), active: null };
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const state = { ...DEFAULTS, lux: false, extra: false, favs: false, need: new Set(), sources: new Set(), active: null };
 const favs = new Set(JSON.parse(localStorage.getItem(FAV_KEY) || '[]'));
 const saveFavs = () => localStorage.setItem(FAV_KEY, JSON.stringify([...favs]));
 
-function km(a, b) {
-  const R = 6371, r = Math.PI / 180;
+function meters(a, b) {
+  const r = Math.PI / 180;
   const dLat = (b[0] - a[0]) * r, dLng = (b[1] - a[1]) * r;
   const x = Math.sin(dLat / 2) ** 2 + Math.cos(a[0] * r) * Math.cos(b[0] * r) * Math.sin(dLng / 2) ** 2;
-  return 2 * R * Math.asin(Math.sqrt(x));
+  return 2 * 6371000 * Math.asin(Math.sqrt(x));
 }
 const fmtM = m => m < 1000 ? `${Math.round(m / 50) * 50} m` : `${(m / 1000).toFixed(1)} km`;
 const stars = n => n ? '★'.repeat(Math.round(n)) + '☆'.repeat(5 - Math.round(n)) : '';
 const persons = h => `${h.persons}${h.personsMax > h.persons ? `–${h.personsMax}` : ''}`;
+const beachText = h => `${h.beachApprox ? '~' : ''}${fmtM(h.beachM)}`;
 
-// Afstanden van de site zelf; valt terug op hemelsbrede afstand tot het strand
-const houses = window.HOUSES.map(h => ({
-  ...h,
-  beachM: h.dist.beach ?? Math.round(km([h.lat, h.lng], BEACH) * 1000),
-  nightM: h.dist.nightlife ?? null,
-}));
-
-[...new Set(houses.map(h => h.town))].sort()
-  .forEach(t => $('#town').add(new Option(t, t, false, t === 'Lloret de Mar')));
+const houses = window.HOUSES.map(h => {
+  const sources = h.offers.map(o => o.source);
+  return {
+    ...h,
+    sources,
+    beachM: h.dist.beach ?? Math.round(Math.min(...BEACHES.map(b => meters([h.lat, h.lng], b)))),
+    beachApprox: h.dist.beach == null,
+    nightM: h.dist.nightlife ?? null,
+    haystack: `${h.name} ${h.area} ${h.town} ${sources.join(' ')}`.toLowerCase(),
+  };
+});
+const towns = [...new Set(houses.map(h => h.town))].sort();
+const sourceNames = [...new Set(houses.flatMap(h => h.sources))].sort();
 
 function groupTag(h) {
   const age = h.minAge ? ` · gem. ${h.minAge}+` : '';
@@ -220,60 +297,120 @@ function groupTag(h) {
   }
 }
 
-// withFeature: tel alvast mee alsof die voorziening ook aangevinkt is (voor de aantallen op de chips)
-function filtered(withFeature) {
-  const q = $('#q').value.trim().toLowerCase();
-  const min = +$('#persons').value || 0;
-  const town = $('#town').value;
-  const groups = $('#groups').value;
-  const maxBeach = +$('#maxBeach').value || Infinity;
-  const maxNight = +$('#maxNight').value || Infinity;
-  const need = withFeature ? [...state.need, withFeature] : [...state.need];
+// feature/source: tel alsof die chip ook aan staat (voor de aantallen op de chips)
+function filtered({ feature, source } = {}) {
+  const q = state.q.trim().toLowerCase();
+  const maxBeach = +state.maxBeach || Infinity;
+  const maxNight = +state.maxNight || Infinity;
+  const need = feature ? [...state.need, feature] : [...state.need];
   return houses.filter(h =>
-    (state.extra ? h.personsMax : h.persons) >= min &&
-    (!town || h.town === town) &&
-    (groups !== 'friends' || h.groups !== 'geen groepen') &&
+    (state.extra ? h.personsMax : h.persons) >= state.persons &&
+    (!state.town || h.town === state.town) &&
+    (state.groups !== 'friends' || h.groups !== 'geen groepen') &&
+    (!state.lux || h.luxury) &&
     (!state.favs || favs.has(h.id)) &&
     h.beachM <= maxBeach &&
     (maxNight === Infinity || (h.nightM != null && h.nightM <= maxNight)) &&
     need.every(f => h.features.includes(f)) &&
-    (!q || `${h.name} ${h.area} ${h.town}`.toLowerCase().includes(q))
+    (source ? h.sources.includes(source) : !state.sources.size || h.sources.some(s => state.sources.has(s))) &&
+    (!q || h.haystack.includes(q))
   );
 }
 
-const SORTS = {
-  persons: (a, b) => b.persons - a.persons || a.beachM - b.beachM,
-  beach: (a, b) => a.beachM - b.beachM,
-  nightlife: (a, b) => (a.nightM ?? 1e9) - (b.nightM ?? 1e9),
-  rating: (a, b) => (b.rating || 0) - (a.rating || 0) || b.reviews - a.reviews,
-  privacy: (a, b) => (b.scores.privacy || 0) - (a.scores.privacy || 0),
-  bedrooms: (a, b) => b.bedrooms - a.bedrooms,
-};
+// ---------- Eigen dropdowns ----------
+const redrawDropdowns = [];
+const closeMenus = except => document.querySelectorAll('.dd.open').forEach(d => d !== except && d.classList.remove('open'));
+
+function dropdown(selector, options, key, onChange) {
+  const root = $(selector);
+  const draw = () => {
+    const opts = options();
+    const current = opts.find(([v]) => v === String(state[key])) || opts[0];
+    root.innerHTML = `
+      <button type="button" class="control" aria-haspopup="listbox"><span>${esc(current[1])}</span>${CHEVRON}</button>
+      <div class="dd-menu" role="listbox">${opts.map(([v, label]) =>
+        `<button type="button" role="option" class="dd-opt ${v === String(state[key]) ? 'on' : ''}" data-value="${esc(v)}">${esc(label)}</button>`).join('')}
+      </div>`;
+  };
+  root.addEventListener('click', e => {
+    const opt = e.target.closest('.dd-opt');
+    if (opt) {
+      state[key] = opt.dataset.value;
+      root.classList.remove('open');
+      draw();
+      onChange();
+      return;
+    }
+    if (e.target.closest('.control')) {
+      closeMenus(root);
+      root.classList.toggle('open');
+    }
+  });
+  redrawDropdowns.push(draw);
+  draw();
+}
+document.addEventListener('click', e => { if (!e.target.closest('.dd')) closeMenus(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenus(); });
 
 // ---------- Kaart ----------
 const map = L.map('map', { zoomControl: false }).setView([41.703, 2.845], 14);
+const ESRI = 'https://server.arcgisonline.com/ArcGIS/rest/services';
+const baseLayers = {
+  sat: L.layerGroup([
+    L.tileLayer(`${ESRI}/World_Imagery/MapServer/tile/{z}/{y}/{x}`, { maxZoom: 19, maxNativeZoom: 18, attribution: 'Luchtfoto&#39;s &copy; Esri, Maxar, Earthstar Geographics' }),
+    L.tileLayer(`${ESRI}/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}`, { maxZoom: 19, maxNativeZoom: 18 }),
+  ]),
+  map: L.tileLayer(`https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=${CARTO_KEY}`, {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attributions">CARTO</a>',
+  }),
+};
+
+function setLayer(name) {
+  Object.values(baseLayers).forEach(layer => map.removeLayer(layer));
+  baseLayers[name].addTo(map);
+  localStorage.setItem(LAYER_KEY, name);
+  map.getContainer().classList.toggle('is-sat', name === 'sat');
+  document.querySelectorAll('.seg button').forEach(b => b.classList.toggle('on', b.dataset.layer === name));
+}
+
+const LayerToggle = L.Control.extend({
+  options: { position: 'topright' },
+  onAdd() {
+    const el = L.DomUtil.create('div', 'seg');
+    el.innerHTML = '<button type="button" data-layer="sat">Satelliet</button><button type="button" data-layer="map">Kaart</button>';
+    L.DomEvent.disableClickPropagation(el);
+    el.addEventListener('click', e => {
+      const b = e.target.closest('button');
+      if (b) setLayer(b.dataset.layer);
+    });
+    return el;
+  },
+});
+new LayerToggle().addTo(map);
 L.control.zoom({ position: 'topright' }).addTo(map);
-L.tileLayer(`https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=${CARTO_KEY}`, {
-  maxZoom: 19,
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attributions">CARTO</a>',
-}).addTo(map);
-L.marker(BEACH, { icon: L.divIcon({ html: '<div class="place">Platja de Lloret</div>' }), interactive: false }).addTo(map);
+setLayer(baseLayers[localStorage.getItem(LAYER_KEY)] ? localStorage.getItem(LAYER_KEY) : 'sat');
+L.marker(BEACHES[0], { icon: L.divIcon({ html: '<div class="place">Platja de Lloret</div>' }), interactive: false }).addTo(map);
 
 const BED_NAMES = { Single: 'enkel', Double: 'dubbel', King: 'kingsize', Queen: 'queen', SofaBed: 'slaapbank', Bunk: 'stapelbed' };
 
 function popupHtml(h) {
   const beds = Object.entries(h.beds).map(([k, v]) => `${v}× ${BED_NAMES[k] || k}`).join(', ');
-  const row = (label, v) => v ? `<span>${label}</span><span>${v}</span>` : '';
+  const row = (label, v) => v ? `<span>${label}</span><span>${esc(v)}</span>` : '';
   const feats = Object.entries(FEATURES).filter(([k]) => h.features.includes(k));
+  const offers = h.offers.map((o, i) => `
+    <a class="btn ${i ? 'ghost' : ''}" href="${esc(o.url)}" target="_blank" rel="noopener">
+      <span>${esc(o.source)} →</span><small>${esc(o.price || 'check 24–31 juli')}</small>
+    </a>`).join('');
   return `<div class="popup">
-    <div class="gallery">${h.images.map(i => `<img loading="lazy" src="${i}" alt="">`).join('')}</div>
-    <h4>${h.name}</h4>
-    <div class="meta"><b>${persons(h)} pers.</b> · ${h.bedrooms} slaapkamers · ${h.bathrooms} badkamers${h.m2 ? ` · ${h.m2} m²` : ''}</div>
+    <div class="gallery">${h.images.map(i => `<img loading="lazy" src="${esc(i)}" alt="">`).join('')}</div>
+    <h4>${esc(h.name)}</h4>
+    <div class="meta"><b>${persons(h)} pers.</b>${h.bedrooms ? ` · ${h.bedrooms} slaapkamers` : ''}${h.bathrooms ? ` · ${h.bathrooms} badkamers` : ''}${h.m2 ? ` · ${h.m2} m²` : ''}</div>
     <div class="grid">
-      ${row('Strand', fmtM(h.beachM))}
+      ${row('Strand', `${beachText(h)}${h.beachApprox ? ' (hemelsbreed)' : ''}`)}
       ${row('Uitgaan', h.nightM != null && fmtM(h.nightM))}
       ${row('Supermarkt', h.dist.supermarket != null && fmtM(h.dist.supermarket))}
-      ${row('Wijk', h.area || h.town)}
+      ${row('Plaats', [h.area, h.town].filter(Boolean).join(', '))}
       ${row('Bedden', beds)}
       ${row('Eettafel', h.seats.replace(/^Ja,?\s*/, ''))}
       ${row('Airco', h.airco && (h.airco.replace(/^Ja,?\s*/, '') || 'ja'))}
@@ -281,13 +418,13 @@ function popupHtml(h) {
       ${row('Uitzicht', stars(h.scores.view))}
       ${row('Reviews', h.rating && `${h.rating} / 5 (${h.reviews})`)}
     </div>
-    <div>${feats.map(([, label]) => `<span class="tag">${label}</span>`).join('')}${groupTag(h)}</div>
-    <a class="btn" href="${h.url}" target="_blank" rel="noopener">Check 24–31 juli op CostaCabana →</a>
+    <div>${h.luxury ? '<span class="tag lux">Luxe</span>' : ''}${feats.map(([, label]) => `<span class="tag">${label}</span>`).join('')}${groupTag(h)}</div>
+    <div class="offers">${offers}</div>
   </div>`;
 }
 
 function pinIcon(h) {
-  const cls = ['pin', favs.has(h.id) && 'fav', state.active === h.id && 'active'].filter(Boolean).join(' ');
+  const cls = ['pin', h.luxury && 'lux', favs.has(h.id) && 'fav', state.active === h.id && 'active'].filter(Boolean).join(' ');
   return L.divIcon({ html: `<div class="${cls}">${h.persons}</div>`, iconSize: [0, 0] });
 }
 
@@ -298,28 +435,52 @@ function select(id, pan) {
   [prev, id].forEach(x => markers[x]?.setIcon(pinIcon(houses.find(h => h.id === x))));
   document.querySelectorAll('.card').forEach(c => c.classList.toggle('active', c.dataset.id === id));
   const m = markers[id];
-  if (m && pan) { map.setView(m.getLatLng(), Math.max(map.getZoom(), 15)); m.openPopup(); }
-  document.querySelector(`.card[data-id="${id}"]`)?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  if (m && pan) {
+    map.setView(m.getLatLng(), Math.max(map.getZoom(), 16));
+    m.openPopup();
+  }
+  document.querySelector(`.card[data-id="${CSS.escape(id)}"]`)?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
 }
 
 // ---------- Filters & lijst ----------
 function renderChips() {
-  $('#options').innerHTML = Object.entries(OPTIONS)
-    .map(([k, label]) => `<button class="chip ${state[k] ? 'on' : ''}" data-option="${k}">${label}</button>`).join('');
+  $('#options').innerHTML = Object.entries(OPTIONS).map(([k, label]) =>
+    `<button type="button" class="chip ${k === 'lux' ? 'gold' : ''} ${state[k] ? 'on' : ''}" data-option="${k}">${label}</button>`).join('');
+
+  $('#sources').innerHTML = sourceNames.map(s => {
+    const on = state.sources.has(s);
+    const n = filtered({ source: s }).length;
+    return `<button type="button" class="chip ${on ? 'on' : ''}" data-source="${esc(s)}" ${!on && !n ? 'disabled' : ''}>${esc(s)}<small>${n}</small></button>`;
+  }).join('');
+
   $('#chips').innerHTML = Object.entries(FEATURES).map(([k, label]) => {
     const on = state.need.has(k);
-    const n = on ? 0 : filtered(k).length;
-    return `<button class="chip ${on ? 'on' : ''}" data-feature="${k}" ${!on && !n ? 'disabled' : ''}>${label}${on ? '' : `<small>${n}</small>`}</button>`;
+    const n = on ? 0 : filtered({ feature: k }).length;
+    return `<button type="button" class="chip ${on ? 'on' : ''}" data-feature="${k}" ${!on && !n ? 'disabled' : ''}>${label}${on ? '' : `<small>${n}</small>`}</button>`;
   }).join('');
   $('#activeCount').textContent = state.need.size ? `${state.need.size} aan` : '';
 }
 
+function renderExternal() {
+  const n = state.persons;
+  const links = {
+    Airbnb: `https://www.airbnb.nl/s/Lloret-de-Mar--Spanje/homes?checkin=${TRIP.checkin}&checkout=${TRIP.checkout}&adults=${n}&room_types%5B%5D=Entire%20home%2Fapt`,
+    Booking: `https://www.booking.com/searchresults.nl.html?ss=Lloret+de+Mar&checkin=${TRIP.checkin}&checkout=${TRIP.checkout}&group_adults=${n}&no_rooms=1&nflt=ht_id%3D213`,
+    Vrbo: `https://www.vrbo.com/search?destination=Lloret%20de%20Mar%2C%20Spain&startDate=${TRIP.checkin}&endDate=${TRIP.checkout}&adults=${n}`,
+  };
+  $('#ext').innerHTML = `<span>Ook zoeken op</span>` +
+    Object.entries(links).map(([name, url]) => `<a href="${url}" target="_blank" rel="noopener">${name} ↗</a>`).join('');
+}
+
 function render(fit) {
   renderChips();
-  const list = filtered().sort(SORTS[$('#sort').value]);
+  renderExternal();
+  const list = filtered().sort(SORTS[state.sort][1]);
   const ids = new Set(list.map(h => h.id));
 
-  for (const [id, m] of Object.entries(markers)) if (!ids.has(id)) { map.removeLayer(m); delete markers[id]; }
+  for (const [id, m] of Object.entries(markers)) {
+    if (!ids.has(id)) { map.removeLayer(m); delete markers[id]; }
+  }
   for (const h of list) {
     if (markers[h.id]) { markers[h.id].setIcon(pinIcon(h)); continue; }
     markers[h.id] = L.marker([h.lat, h.lng], { icon: pinIcon(h), riseOnHover: true })
@@ -330,29 +491,45 @@ function render(fit) {
 
   $('#count').textContent = `${list.length} ${list.length === 1 ? 'huis' : 'huizen'} gevonden`;
   $('#list').innerHTML = list.map(h => `
-    <div class="card ${state.active === h.id ? 'active' : ''}" data-id="${h.id}">
-      <img loading="lazy" src="${h.images[0] || ''}" alt="">
+    <div class="card ${state.active === h.id ? 'active' : ''}" data-id="${esc(h.id)}">
+      <img loading="lazy" src="${esc(h.images[0] || '')}" alt="">
       <div>
-        <h3>${h.name}<button class="star ${favs.has(h.id) ? 'on' : ''}" data-star="${h.id}" title="Favoriet">★</button></h3>
+        <h3><span>${esc(h.name)}</span><button type="button" class="star ${favs.has(h.id) ? 'on' : ''}" data-star="${esc(h.id)}" aria-label="Favoriet">★</button></h3>
         <div class="meta">
-          <b>${persons(h)} pers.</b> · ${h.bedrooms} slpk · ${h.bathrooms} badk<br>
-          ${fmtM(h.beachM)} tot strand · ${h.area || h.town}${h.rating ? ` · ★ ${h.rating}` : ''}
+          <b>${persons(h)} pers.</b>${h.bedrooms ? ` · ${h.bedrooms} slpk` : ''}${h.bathrooms ? ` · ${h.bathrooms} badk` : ''}<br>
+          ${beachText(h)} tot strand · ${esc(h.area || h.town)}${h.rating ? ` · ★ ${h.rating}` : ''}<br>
+          <span class="src">${esc(h.sources.join(' · '))}</span>${h.price ? ` · ${esc(h.price)}` : ''}
         </div>
-        ${groupTag(h)}
+        ${h.luxury ? '<span class="tag lux">Luxe</span>' : ''}${groupTag(h)}
       </div>
     </div>`).join('') || '<p class="meta" style="padding:20px">Niets gevonden. Zet een paar filters uit.</p>';
 
-  if (fit && list.length) map.fitBounds(L.latLngBounds(list.map(h => [h.lat, h.lng])), { padding: [50, 50], maxZoom: 16 });
+  if (fit && list.length) map.fitBounds(L.latLngBounds(list.map(h => [h.lat, h.lng])), { padding: [60, 60], maxZoom: 16 });
 }
+
+dropdown('#sort', () => Object.entries(SORTS).map(([k, [label]]) => [k, label]), 'sort', () => render(false));
+dropdown('#town', () => [['', 'Alle plaatsen'], ...towns.map(t => [t, t])], 'town', () => render(true));
+dropdown('#groups', () => GROUPS, 'groups', () => render(true));
+dropdown('#maxBeach', () => DISTANCES, 'maxBeach', () => render(true));
+dropdown('#maxNight', () => DISTANCES, 'maxNight', () => render(true));
+
+$('#stepper').addEventListener('click', e => {
+  const b = e.target.closest('[data-step]');
+  if (!b) return;
+  state.persons = Math.min(40, Math.max(1, state.persons + +b.dataset.step));
+  $('#persons').textContent = state.persons;
+  render(true);
+});
+
+$('#q').addEventListener('input', e => { state.q = e.target.value; render(true); });
 
 $('.filters').addEventListener('click', e => {
   const chip = e.target.closest('.chip');
   if (!chip) return;
+  const toggle = (set, v) => set.has(v) ? set.delete(v) : set.add(v);
   if (chip.dataset.option) state[chip.dataset.option] = !state[chip.dataset.option];
-  if (chip.dataset.feature) {
-    const f = chip.dataset.feature;
-    state.need.has(f) ? state.need.delete(f) : state.need.add(f);
-  }
+  if (chip.dataset.feature) toggle(state.need, chip.dataset.feature);
+  if (chip.dataset.source) toggle(state.sources, chip.dataset.source);
   render(true);
 });
 
@@ -369,18 +546,14 @@ $('#list').addEventListener('click', e => {
   if (card) select(card.dataset.id, true);
 });
 
-['#q', '#persons'].forEach(s => $(s).addEventListener('input', () => render(true)));
-['#town', '#groups', '#maxBeach', '#maxNight'].forEach(s => $(s).addEventListener('change', () => render(true)));
-$('#sort').addEventListener('change', () => render(false));
-
 $('#reset').addEventListener('click', e => {
   e.preventDefault();
+  Object.assign(state, DEFAULTS, { lux: false, extra: false, favs: false });
   state.need.clear();
-  state.extra = state.favs = false;
+  state.sources.clear();
   $('#q').value = '';
-  $('#persons').value = 12;
-  $('#town').value = 'Lloret de Mar';
-  ['#groups', '#sort', '#maxBeach', '#maxNight'].forEach(s => $(s).selectedIndex = 0);
+  $('#persons').textContent = state.persons;
+  redrawDropdowns.forEach(draw => draw());
   render(true);
 });
 
@@ -388,8 +561,8 @@ $('#share').addEventListener('click', async e => {
   e.preventDefault();
   if (!favs.size) return alert('Markeer eerst een paar huizen met ★');
   const text = houses.filter(h => favs.has(h.id))
-    .map(h => `★ ${h.name} (${persons(h)} pers.) – ${h.url}`).join('\n');
-  await navigator.clipboard.writeText(`Onze favorieten voor Lloret, 24–31 juli:\n${text}\n\nKaart: ${location.href.split('#')[0]}`);
+    .map(h => `★ ${h.name} (${persons(h)} pers.) – ${h.offers[0].url}`).join('\n');
+  await navigator.clipboard.writeText(`Onze favorieten voor Lloret, 24–31 juli:\n${text}\n\nKaart: ${location.href.split(/[?#]/)[0]}`);
   alert('Gekopieerd! Plak het in de groepsapp.');
 });
 
