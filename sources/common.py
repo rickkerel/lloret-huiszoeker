@@ -62,7 +62,7 @@ KEYWORDS = {
     "sauna": r"\bsauna",
     "seaView": r"sea ?views?|zeezicht|uitzicht op (de )?zee|vistas al mar|ocean view",
     "games": r"table tennis|ping ?pong|pool table|billiard|foosball|tafeltennis|pooltafel|biljart|tafelvoetbal",
-    "sound": r"sound system|speakers?\b|muziekinstallatie|geluidsinstallatie|sonos",
+    "sound": r"sound ?system|music system|\bhi-?fi\b|bluetooth speakers?|muziekinstallatie|geluidsinstallatie|\bsonos\b|disco-? ?(systeem|system|lights?|verlichting|bal|ball)",
 }
 
 
@@ -103,9 +103,24 @@ def km_from_lloret(lat, lng):
     return 2 * 6371 * math.asin(math.sqrt(x))
 
 
+# Zinnen over de omgeving tellen niet mee: "het waterpark heeft glijbanen en jacuzzi's" zegt niets over het huis
+SURROUNDINGS = (
+    r"water ?park|aqua ?park|aquapark|water ?world|theme park|pretpark|parque acu|attraction|attractie"
+    r"|\brides\b|water ?slides?|glijbaan|glijbanen|wave pools?|golfslagbad|spa hotel|wellness ?cent"
+)
+
+
+# "No lift", "geen airco", "sin ascensor": een ontkenning vlak ervoor telt niet als voorziening
+NEGATION = r"\b(no|not|without|geen|niet|zonder|sin|sense)\b[^.,;!?]{0,20}$"
+
+
 def text_features(text):
-    t = (text or "").lower()
-    return sorted(k for k, p in KEYWORDS.items() if re.search(p, t))
+    sentences = re.split(r"(?<=[.!?;])\s+|\n", (text or "").lower())
+    t = " ".join(s for s in sentences if not re.search(SURROUNDINGS, s))
+    return sorted(
+        k for k, p in KEYWORDS.items()
+        if any(not re.search(NEGATION, t[max(0, m.start() - 30):m.start()]) for m in re.finditer(p, t))
+    )
 
 
 def keep(house):

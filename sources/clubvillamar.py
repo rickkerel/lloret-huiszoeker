@@ -132,10 +132,14 @@ def parse(url, page, listing):
     facilities = m.group(1)[:3000] if m else ""
     m = re.search(r"Services (?:Included|Mandatory|Optional) services(.*?)(?:More information|$)", text)
     services = m.group(1)[:3000] if m else ""
-    # Kop + omschrijving + bedden: vanaf de laatste "Share this villa Share" t/m "Registration number"/Bedrooms
+    # Kop + omschrijving. Tussen kop en omschrijving staan beschikbaarheid en gastreviews;
+    # die slaan we over, anders telt "de jacuzzi werkte niet" in een review als voorziening.
     start = text.rfind("Share this villa Share")
     end = text.find("BOOK THIS VILLA › Bedrooms", start)
-    description = text[start:end if end > start else start + 8000] if start >= 0 else ""
+    block = text[start:end if end > start else start + 8000] if start >= 0 else ""
+    head_part = block.split("Availability", 1)[0]
+    body_part = block.rsplit("Description Description", 1)[1] if "Description Description" in block else ""
+    description = f"{head_part} {body_part}"
 
     features = set()
     amen = {a.get("name", "").lower(): a.get("value") for a in acc.get("amenityFeature") or []}

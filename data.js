@@ -1,4 +1,4 @@
-// Gegenereerd door build.py op 2026-09-15 17:08
+// Gegenereerd door build.py op 2026-09-15 17:14
 window.HOUSES = [
  {
   "area": "Brunyola",
@@ -73,7 +73,8 @@ window.HOUSES = [
    "games",
    "parking",
    "privatePool",
-   "sauna"
+   "sauna",
+   "sound"
   ],
   "airco": "Ja, inbegrepen, diverse ruimtes",
   "seats": "Ja, meer dan 10 zitplaatsen",
@@ -203,7 +204,6 @@ window.HOUSES = [
   "m2": null,
   "features": [
    "bbq",
-   "parking",
    "dishwasher"
   ],
   "airco": "",
@@ -265,7 +265,7 @@ window.HOUSES = [
    "parking",
    "dishwasher"
   ],
-  "airco": "ja",
+  "airco": "Complimentary wi-fi, parking and air conditioning/ heating is available.",
   "seats": "",
   "dist": {
    "beach": 7000,
@@ -907,7 +907,7 @@ window.HOUSES = [
    "seaView",
    "dishwasher"
   ],
-  "airco": "ja",
+  "airco": "Very comfortable and stylish furnishings: living/dining room with dining table, digital TV, international TV channels and air conditioning.",
   "seats": "",
   "dist": {},
   "scores": {},
@@ -1105,7 +1105,7 @@ window.HOUSES = [
    "parking",
    "dishwasher"
   ],
-  "airco": "ja",
+  "airco": "Airconditioning in the living room.",
   "seats": "",
   "dist": {
    "beach": 12000,
@@ -1235,7 +1235,7 @@ window.HOUSES = [
    "parking",
    "dishwasher"
   ],
-  "airco": "ja",
+  "airco": "Air conditioning is available in the dining room Groups of young people are allowed in this villa Pets are allowed in this villa.",
   "seats": "",
   "dist": {
    "beach": 12900,
@@ -1786,13 +1786,11 @@ window.HOUSES = [
   "m2": null,
   "features": [
    "privatePool",
-   "airco",
-   "aircoFree",
    "bbq",
    "seaView",
    "dishwasher"
   ],
-  "airco": "ja",
+  "airco": "",
   "seats": "",
   "dist": {
    "beach": 3000,
@@ -1905,7 +1903,7 @@ window.HOUSES = [
    "privatePool",
    "seaView"
   ],
-  "airco": "toeslag €14.29 per day , to be paid on arrival",
+  "airco": "Breathtaking sea view, 14 persons ample space, Wifi, shared tennis court, large pool and terraces, airconditioning, barbecue. toeslag €14.29 per day , to be paid on arrival",
   "seats": "",
   "dist": {
    "beach": 3300,
@@ -1966,7 +1964,6 @@ window.HOUSES = [
    "aircoFree",
    "bbq",
    "parking",
-   "jacuzzi",
    "seaView",
    "dishwasher"
   ],
@@ -2389,14 +2386,11 @@ window.HOUSES = [
   "m2": null,
   "features": [
    "privatePool",
-   "airco",
-   "aircoFree",
    "bbq",
    "parking",
-   "sound",
    "seaView"
   ],
-  "airco": "ja",
+  "airco": "",
   "seats": "",
   "dist": {
    "beach": 3000,
@@ -2549,10 +2543,9 @@ window.HOUSES = [
    "privatePool",
    "airco",
    "aircoFree",
-   "jacuzzi",
    "dishwasher"
   ],
-  "airco": "ja",
+  "airco": "The owner lives in other part of the villa has separate access , the pool and other facilities are for private use of clients Airconditioning is available in both living rooms of the villa.",
   "seats": "",
   "dist": {
    "beach": 800,
@@ -2777,11 +2770,10 @@ window.HOUSES = [
    "aircoFree",
    "bbq",
    "parking",
-   "lift",
    "seaView",
    "dishwasher"
   ],
-  "airco": "ja",
+  "airco": "Spacious and bright, very practical and stylish furnishings: living/dining room with dining table, bar, digital TV and air conditioning.",
   "seats": "",
   "dist": {},
   "scores": {},
@@ -3001,10 +2993,9 @@ window.HOUSES = [
    "airco",
    "aircoFree",
    "bbq",
-   "jacuzzi",
    "dishwasher"
   ],
-  "airco": "ja",
+  "airco": "Air conditioning is available in the main building in the livingroom,hallway and 1 bedroom upstairs.",
   "seats": "",
   "dist": {
    "beach": 5500,
@@ -3170,14 +3161,11 @@ window.HOUSES = [
   "m2": null,
   "features": [
    "privatePool",
-   "airco",
-   "aircoFree",
    "bbq",
    "parking",
-   "jacuzzi",
    "dishwasher"
   ],
-  "airco": "ja",
+  "airco": "",
   "seats": "",
   "dist": {
    "beach": 15000,
@@ -3235,7 +3223,7 @@ window.HOUSES = [
    "seaView",
    "dishwasher"
   ],
-  "airco": "toeslag €14.29 per day , to be paid on arrival",
+  "airco": "We just want to see a big smile on your face, while you're enjoying your private swimming pool (with beautiful colored LED lighting), barbecue, airconditioning, shared tennis court with the neighbouring Villa Romana or the breathtaking views over the Mediterranean Sea! toeslag €14.29 per day , to be paid on arrival",
   "seats": "",
   "dist": {
    "beach": 3300,
@@ -3286,13 +3274,11 @@ window.HOUSES = [
   "m2": null,
   "features": [
    "privatePool",
-   "airco",
-   "aircoFree",
    "bbq",
    "parking",
    "dishwasher"
   ],
-  "airco": "ja",
+  "airco": "",
   "seats": "",
   "dist": {
    "beach": 7000,
@@ -3693,7 +3679,7 @@ window.HOUSES = [
    "seaView",
    "dishwasher"
   ],
-  "airco": "ja",
+  "airco": "Villa has air conditioning.",
   "seats": "",
   "dist": {
    "beach": 4000,
@@ -3995,7 +3981,6 @@ window.HOUSES = [
    "privatePool",
    "bbq",
    "parking",
-   "games",
    "dishwasher"
   ],
   "airco": "",
@@ -4050,13 +4035,11 @@ window.HOUSES = [
   "m2": null,
   "features": [
    "privatePool",
-   "airco",
-   "aircoFree",
    "bbq",
    "seaView",
    "dishwasher"
   ],
-  "airco": "ja",
+  "airco": "",
   "seats": "",
   "dist": {
    "beach": 2000,
@@ -4115,7 +4098,7 @@ window.HOUSES = [
    "parking",
    "dishwasher"
   ],
-  "airco": "ja",
+  "airco": "Air conditioning is available in the living room on the ground floor, the living room upstairs, and 2 bedrooms on the second floor.",
   "seats": "",
   "dist": {
    "beach": 7000,
@@ -4601,7 +4584,7 @@ window.HOUSES = [
    "seaView",
    "dishwasher"
   ],
-  "airco": "ja",
+  "airco": "Air conditioning only in the living room.",
   "seats": "",
   "dist": {
    "beach": 3700,
@@ -4655,8 +4638,7 @@ window.HOUSES = [
   "features": [
    "privatePool",
    "bbq",
-   "parking",
-   "games"
+   "parking"
   ],
   "airco": "",
   "seats": "",
@@ -4767,13 +4749,11 @@ window.HOUSES = [
   "m2": 220,
   "features": [
    "privatePool",
-   "airco",
-   "aircoFree",
    "bbq",
    "parking",
    "dishwasher"
   ],
-  "airco": "ja",
+  "airco": "",
   "seats": "",
   "dist": {
    "beach": 400,
@@ -4889,7 +4869,7 @@ window.HOUSES = [
    "seaView",
    "dishwasher"
   ],
-  "airco": "ja",
+  "airco": "The villa also has air conditioning.",
   "seats": "",
   "dist": {
    "beach": 2500,
@@ -5057,7 +5037,7 @@ window.HOUSES = [
    "bbq",
    "dishwasher"
   ],
-  "airco": "ja",
+  "airco": "Air conditioning is available upstairs in the living room.",
   "seats": "",
   "dist": {
    "beach": 6500,
@@ -5108,14 +5088,11 @@ window.HOUSES = [
   "m2": null,
   "features": [
    "privatePool",
-   "airco",
-   "aircoFree",
    "bbq",
    "parking",
-   "games",
    "dishwasher"
   ],
-  "airco": "ja",
+  "airco": "",
   "seats": "",
   "dist": {
    "beach": 7000,
@@ -5451,13 +5428,11 @@ window.HOUSES = [
   "m2": null,
   "features": [
    "privatePool",
-   "airco",
-   "aircoFree",
    "bbq",
    "parking",
    "dishwasher"
   ],
-  "airco": "ja",
+  "airco": "",
   "seats": "",
   "dist": {
    "beach": 3000,
@@ -5515,7 +5490,7 @@ window.HOUSES = [
    "parking",
    "dishwasher"
   ],
-  "airco": "ja",
+  "airco": "The living room has air conditioning , while the bedrooms are equipped with fans for a comfortable night’s sleep.",
   "seats": "",
   "dist": {
    "beach": 12000,
