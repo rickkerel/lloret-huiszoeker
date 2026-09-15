@@ -10,6 +10,7 @@ Mislukt een bron, dan gebruiken we de laatst gelukte uitkomst uit cache/<bron>.j
 import importlib
 import json
 import math
+import re
 import sys
 import time
 from pathlib import Path
@@ -84,6 +85,8 @@ TOWN_NAMES = {
     "platja d aro": "Platja d'Aro",
     "sant feliu de guixols": "Sant Feliu de Guíxols",
     "sant antoni de calonge": "Sant Antoni de Calonge",
+    "st antoni de calonge": "Sant Antoni de Calonge",
+    "playa de aro": "Platja d'Aro",
     "tossa de mar": "Tossa de Mar",
     "lloret de mar": "Lloret de Mar",
 }
@@ -111,6 +114,9 @@ def main():
     for h in houses:
         h["personsMax"] = h["personsMax"] or h["persons"]
         h["town"] = TOWN_NAMES.get(h["town"].lower(), h["town"])
+        # Sommige bureaus plakken plaats/land achter de huisnaam ("Villa X Lloret de Mar 2", "Villa Y Spain")
+        name = re.sub(rf"\s+{re.escape(h['town'])}(?=(\s+\d+)?$)", "", h["name"], flags=re.I)
+        h["name"] = re.sub(r"\s+Spain$", "", name).strip(" -,") or h["name"]
     merged = merge(houses)
     merged.sort(key=lambda h: (-(h["persons"] or 0), h["name"]))
 

@@ -1,4 +1,4 @@
-// Gegenereerd door build.py op 2026-09-15 17:02
+// Gegenereerd door build.py op 2026-09-15 17:08
 window.HOUSES = [
  {
   "area": "Brunyola",
@@ -834,6 +834,60 @@ window.HOUSES = [
   ]
  },
  {
+  "area": "Roca Grossa",
+  "personsMax": 16,
+  "bedrooms": 8,
+  "bathrooms": 3.0,
+  "beds": {},
+  "m2": 270,
+  "features": [
+   "bbq",
+   "dishwasher",
+   "parking",
+   "privatePool"
+  ],
+  "airco": "",
+  "seats": "",
+  "dist": {
+   "airport": 34000
+  },
+  "scores": {},
+  "groups": "onbekend",
+  "minAge": null,
+  "rating": null,
+  "reviews": 0,
+  "images": [
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-fenals-lloret-lloret-de-m-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-01.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-fenals-lloret-lloret-de-m-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-02.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-fenals-lloret-lloret-de-m-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-03.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-fenals-lloret-lloret-de-m-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-04.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-fenals-lloret-lloret-de-m-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-05.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-fenals-lloret-lloret-de-m-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-06.jpg"
+  ],
+  "luxury": true,
+  "price": "vanaf £2.452 / week",
+  "id": "excellence-casa-fenals-lloret-de-mar",
+  "source": "Excellence Luxury Villas",
+  "name": "Casa Fenals Lloret",
+  "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/lloret-de-mar/casa-fenals-lloret-de-mar/",
+  "town": "Lloret de Mar",
+  "lat": 41.7130128,
+  "lng": 2.8483364,
+  "persons": 16,
+  "offers": [
+   {
+    "source": "Excellence Luxury Villas",
+    "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/lloret-de-mar/casa-fenals-lloret-de-mar/",
+    "price": "vanaf £2.452 / week"
+   },
+   {
+    "source": "Club Villamar",
+    "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/sol-y-brisa",
+    "price": "vanaf €440 / nacht"
+   }
+  ]
+ },
+ {
   "area": "",
   "personsMax": 16,
   "bedrooms": 8,
@@ -884,57 +938,6 @@ window.HOUSES = [
     "source": "Club Villamar",
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/joie-de-vivre",
     "price": "vanaf €559 / nacht"
-   }
-  ]
- },
- {
-  "area": "",
-  "personsMax": 16,
-  "bedrooms": 8,
-  "bathrooms": 3.0,
-  "beds": {
-   "Single": 12,
-   "Bunk": 4,
-   "Double": 1
-  },
-  "m2": null,
-  "features": [
-   "privatePool",
-   "bbq",
-   "parking",
-   "dishwasher"
-  ],
-  "airco": "",
-  "seats": "",
-  "dist": {},
-  "scores": {},
-  "groups": "groepen ok",
-  "minAge": null,
-  "rating": null,
-  "reviews": 0,
-  "images": [
-   "https://www.clubvillamar.com/uploads/images/17371/69a980b79dd17/640x429/69a980b79dd17.jpg",
-   "https://www.clubvillamar.com/uploads/images/17371/69a980b806b60/640x429/69a980b806b60.jpg",
-   "https://www.clubvillamar.com/uploads/images/17371/69a980b93b66b/640x429/69a980b93b66b.jpg",
-   "https://www.clubvillamar.com/uploads/images/17371/69a980b99a926/640x429/69a980b99a926.jpg",
-   "https://www.clubvillamar.com/uploads/images/17371/69a980ba6170d/640x429/69a980ba6170d.jpg",
-   "https://www.clubvillamar.com/uploads/images/17371/69a980bab37d3/640x429/69a980bab37d3.jpg"
-  ],
-  "luxury": false,
-  "price": "vanaf €440 / nacht",
-  "id": "clubvillamar-sol-y-brisa",
-  "source": "Club Villamar",
-  "name": "Sol y Brisa",
-  "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/sol-y-brisa",
-  "town": "Lloret de Mar",
-  "lat": 41.7130128,
-  "lng": 2.8483364,
-  "persons": 16,
-  "offers": [
-   {
-    "source": "Club Villamar",
-    "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/sol-y-brisa",
-    "price": "vanaf €440 / nacht"
    }
   ]
  },
@@ -1437,6 +1440,53 @@ window.HOUSES = [
   ]
  },
  {
+  "area": "",
+  "personsMax": 14,
+  "bedrooms": 7,
+  "bathrooms": 4.0,
+  "beds": {},
+  "m2": null,
+  "features": [
+   "airco",
+   "parking",
+   "privatePool",
+   "seaView"
+  ],
+  "airco": "While not all bedrooms have air conditioning, ceiling fans are provided to ensure a comfortable stay.",
+  "seats": "",
+  "dist": {},
+  "scores": {},
+  "groups": "onbekend",
+  "minAge": null,
+  "rating": null,
+  "reviews": 0,
+  "images": [
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1115705-01.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1115705-02.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1115705-03.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1115705-04.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1115705-05.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1115705-06.jpg"
+  ],
+  "luxury": true,
+  "price": "vanaf £8.253 / week",
+  "id": "excellence-villa-esmeralda-sa-caleta-lloret-de-mar",
+  "source": "Excellence Luxury Villas",
+  "name": "Casa Tramuntana Lloret 2",
+  "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/catalonia/girona-region/villa-esmeralda-sa-caleta-lloret-de-mar/",
+  "town": "Lloret de Mar",
+  "lat": 41.7056314,
+  "lng": 2.8789696,
+  "persons": 14,
+  "offers": [
+   {
+    "source": "Excellence Luxury Villas",
+    "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/catalonia/girona-region/villa-esmeralda-sa-caleta-lloret-de-mar/",
+    "price": "vanaf £8.253 / week"
+   }
+  ]
+ },
+ {
   "area": "Serra Brava",
   "personsMax": 14,
   "bedrooms": 5,
@@ -1847,20 +1897,21 @@ window.HOUSES = [
   },
   "m2": null,
   "features": [
-   "privatePool",
    "airco",
    "bbq",
+   "dishwasher",
+   "jacuzzi",
    "parking",
-   "seaView",
-   "dishwasher"
+   "privatePool",
+   "seaView"
   ],
   "airco": "toeslag €14.29 per day , to be paid on arrival",
   "seats": "",
   "dist": {
    "beach": 3300,
    "supermarket": 3000,
-   "nightlife": 4000,
    "restaurant": 2700,
+   "nightlife": 4000,
    "airport": 40000
   },
   "scores": {},
@@ -1876,7 +1927,7 @@ window.HOUSES = [
    "https://www.clubvillamar.com/uploads/images/64/5aeb262238495/640x429/5aeb262238495.jpg",
    "https://www.clubvillamar.com/uploads/images/64/5aeb26221545a/640x429/5aeb26221545a.jpg"
   ],
-  "luxury": false,
+  "luxury": true,
   "price": "vanaf €171 / nacht",
   "id": "clubvillamar-romana",
   "source": "Club Villamar",
@@ -1891,6 +1942,11 @@ window.HOUSES = [
     "source": "Club Villamar",
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/romana",
     "price": "vanaf €171 / nacht"
+   },
+   {
+    "source": "Excellence Luxury Villas",
+    "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/costa-brava/villa-manila-spain/",
+    "price": "vanaf £2.500 / week"
    }
   ]
  },
@@ -2377,6 +2433,52 @@ window.HOUSES = [
     "source": "Club Villamar",
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/serra-brava",
     "price": "vanaf €57 / nacht"
+   }
+  ]
+ },
+ {
+  "area": "",
+  "personsMax": 12,
+  "bedrooms": 6,
+  "bathrooms": 4.0,
+  "beds": {},
+  "m2": null,
+  "features": [
+   "airco",
+   "bbq",
+   "parking"
+  ],
+  "airco": "The ground floor features air-conditioned bedrooms and a large living area, ensuring comfort during your stay.",
+  "seats": "",
+  "dist": {},
+  "scores": {},
+  "groups": "onbekend",
+  "minAge": null,
+  "rating": null,
+  "reviews": 0,
+  "images": [
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1151731-01.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1151731-02.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1151731-03.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1151731-04.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1151731-05.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/05/casa-tramuntana-lloret-girona-region-1151731-06.jpg"
+  ],
+  "luxury": true,
+  "price": "vanaf £6.615 / week",
+  "id": "excellence-villa-llevant-puig-de-castel-lloret-de-mar",
+  "source": "Excellence Luxury Villas",
+  "name": "Casa Tramuntana Lloret",
+  "url": "https://excellenceluxuryvillas.com/golf-nearby-rentals/catalonia/girona-region/villa-llevant-puig-de-castel-lloret-de-mar/",
+  "town": "Lloret de Mar",
+  "lat": 41.7986948,
+  "lng": 2.9857984,
+  "persons": 12,
+  "offers": [
+   {
+    "source": "Excellence Luxury Villas",
+    "url": "https://excellenceluxuryvillas.com/golf-nearby-rentals/catalonia/girona-region/villa-llevant-puig-de-castel-lloret-de-mar/",
+    "price": "vanaf £6.615 / week"
    }
   ]
  },
@@ -3349,6 +3451,61 @@ window.HOUSES = [
   ]
  },
  {
+  "area": "Serrabrava",
+  "personsMax": 12,
+  "bedrooms": 5,
+  "bathrooms": 3.0,
+  "beds": {},
+  "m2": 250,
+  "features": [
+   "airco",
+   "bbq",
+   "dishwasher",
+   "parking",
+   "privatePool",
+   "seaView"
+  ],
+  "airco": "The upper level welcomes guests with a bright living and dining room equipped with satellite television and air conditioning, flowing seamlessly to a double bed",
+  "seats": "",
+  "dist": {
+   "beach": 3000,
+   "airport": 34000,
+   "supermarket": 200,
+   "restaurant": 200,
+   "nightlife": 5000
+  },
+  "scores": {},
+  "groups": "onbekend",
+  "minAge": null,
+  "rating": null,
+  "reviews": 0,
+  "images": [
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-llevant-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-01.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-llevant-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-02.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-llevant-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-03.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-llevant-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-04.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-llevant-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-05.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-llevant-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-06.jpg"
+  ],
+  "luxury": true,
+  "price": "vanaf £1.240 / week",
+  "id": "excellence-villa-llevant-lloret-lloret-de-mar",
+  "source": "Excellence Luxury Villas",
+  "name": "Villa Llevant Canyelles Lloret",
+  "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/lloret-de-mar/villa-llevant-lloret-lloret-de-mar/",
+  "town": "Lloret de Mar",
+  "lat": 41.719749234426,
+  "lng": 2.8722709803566,
+  "persons": 12,
+  "offers": [
+   {
+    "source": "Excellence Luxury Villas",
+    "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/lloret-de-mar/villa-llevant-lloret-lloret-de-mar/",
+    "price": "vanaf £1.240 / week"
+   }
+  ]
+ },
+ {
   "area": "Rocca Grossa",
   "personsMax": 13,
   "bedrooms": 6,
@@ -3408,6 +3565,110 @@ window.HOUSES = [
     "source": "CostaCabana",
     "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-maribel.html",
     "price": ""
+   }
+  ]
+ },
+ {
+  "area": "Roca Grossa",
+  "personsMax": 12,
+  "bedrooms": 7,
+  "bathrooms": 3.0,
+  "beds": {},
+  "m2": 240,
+  "features": [
+   "airco",
+   "bbq",
+   "dishwasher",
+   "parking",
+   "privatePool"
+  ],
+  "airco": "One master bedroom with French doors opening to the pool area provides ground-floor convenience with its own ensuite shower room and air conditioning.",
+  "seats": "",
+  "dist": {
+   "airport": 34000
+  },
+  "scores": {},
+  "groups": "onbekend",
+  "minAge": null,
+  "rating": null,
+  "reviews": 0,
+  "images": [
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-roca-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-01.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-roca-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-02.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-roca-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-03.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-roca-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-04.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-roca-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-05.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-roca-lloret-luxury-villa-rental-lloret-de-mar-spain-with-private-pool-06.jpg"
+  ],
+  "luxury": true,
+  "price": "vanaf £1.440 / week",
+  "id": "excellence-villa-roca-lloret",
+  "source": "Excellence Luxury Villas",
+  "name": "Villa Roca Lloret",
+  "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/lloret-de-mar/villa-roca-lloret/",
+  "town": "Lloret de Mar",
+  "lat": 41.7108383,
+  "lng": 2.8586464,
+  "persons": 12,
+  "offers": [
+   {
+    "source": "Excellence Luxury Villas",
+    "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/lloret-de-mar/villa-roca-lloret/",
+    "price": "vanaf £1.440 / week"
+   }
+  ]
+ },
+ {
+  "area": "Mas Pallí",
+  "personsMax": 11,
+  "bedrooms": 5,
+  "bathrooms": 3.0,
+  "beds": {},
+  "m2": 200,
+  "features": [
+   "airco",
+   "bbq",
+   "dishwasher",
+   "parking",
+   "privatePool",
+   "seaView"
+  ],
+  "airco": "The upper level features a spacious living and dining room with air conditioning and digital television, alongside a master bedroom with a luxurious 180cm Frenc",
+  "seats": "",
+  "dist": {
+   "beach": 2000,
+   "airport": 43000,
+   "supermarket": 2000,
+   "restaurant": 2000
+  },
+  "scores": {},
+  "groups": "onbekend",
+  "minAge": null,
+  "rating": null,
+  "reviews": 0,
+  "images": [
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-roca-calonge-luxury-villa-rental-calonge-spain-with-private-pool-01.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-roca-calonge-luxury-villa-rental-calonge-spain-with-private-pool-02.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-roca-calonge-luxury-villa-rental-calonge-spain-with-private-pool-03.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-roca-calonge-luxury-villa-rental-calonge-spain-with-private-pool-04.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-roca-calonge-luxury-villa-rental-calonge-spain-with-private-pool-05.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-roca-calonge-luxury-villa-rental-calonge-spain-with-private-pool-06.jpg"
+  ],
+  "luxury": true,
+  "price": "vanaf £1.876 / week",
+  "id": "excellence-casa-roca-calonge",
+  "source": "Excellence Luxury Villas",
+  "name": "Casa Roca",
+  "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/calonge/casa-roca-calonge/",
+  "town": "Calonge",
+  "lat": 41.83745630386692,
+  "lng": 3.0689771901782903,
+  "persons": 11,
+  "offers": [
+   {
+    "source": "Excellence Luxury Villas",
+    "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/calonge/casa-roca-calonge/",
+    "price": "vanaf £1.876 / week"
    }
   ]
  },
@@ -4065,6 +4326,206 @@ window.HOUSES = [
   ]
  },
  {
+  "area": "",
+  "personsMax": 10,
+  "bedrooms": 4,
+  "bathrooms": 2.0,
+  "beds": {},
+  "m2": 180,
+  "features": [
+   "dishwasher",
+   "parking",
+   "privatePool"
+  ],
+  "airco": "",
+  "seats": "",
+  "dist": {
+   "beach": 200,
+   "airport": 39000,
+   "supermarket": 20,
+   "restaurant": 10
+  },
+  "scores": {},
+  "groups": "onbekend",
+  "minAge": null,
+  "rating": null,
+  "reviews": 0,
+  "images": [
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-cavall-aro-luxury-villa-rental-playa-de-aro-spain-01.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-cavall-aro-luxury-villa-rental-playa-de-aro-spain-02.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-cavall-aro-luxury-villa-rental-playa-de-aro-spain-03.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-cavall-aro-luxury-villa-rental-playa-de-aro-spain-04.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-cavall-aro-luxury-villa-rental-playa-de-aro-spain-05.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-cavall-aro-luxury-villa-rental-playa-de-aro-spain-06.jpg"
+  ],
+  "luxury": true,
+  "price": "vanaf £1.372 / week",
+  "id": "excellence-casa-cavall-aro",
+  "source": "Excellence Luxury Villas",
+  "name": "Casa Cavall Aro",
+  "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/spain/casa-cavall-aro/",
+  "town": "Platja d'Aro",
+  "lat": 41.81745743760566,
+  "lng": 3.0664347591606145,
+  "persons": 10,
+  "offers": [
+   {
+    "source": "Excellence Luxury Villas",
+    "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/spain/casa-cavall-aro/",
+    "price": "vanaf £1.372 / week"
+   }
+  ]
+ },
+ {
+  "area": "Torre Valentina",
+  "personsMax": 10,
+  "bedrooms": 5,
+  "bathrooms": 5.0,
+  "beds": {},
+  "m2": null,
+  "features": [
+   "bbq",
+   "dishwasher",
+   "parking",
+   "privatePool",
+   "seaView"
+  ],
+  "airco": "",
+  "seats": "",
+  "dist": {
+   "airport": 44000
+  },
+  "scores": {},
+  "groups": "onbekend",
+  "minAge": null,
+  "rating": null,
+  "reviews": 0,
+  "images": [
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevant-calonge-luxury-villa-rental-st-antoni-de-calonge-spain-sea-view-01.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevant-calonge-luxury-villa-rental-st-antoni-de-calonge-spain-sea-view-02.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevant-calonge-luxury-villa-rental-st-antoni-de-calonge-spain-sea-view-03.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevant-calonge-luxury-villa-rental-st-antoni-de-calonge-spain-sea-view-04.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevant-calonge-luxury-villa-rental-st-antoni-de-calonge-spain-sea-view-05.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevant-calonge-luxury-villa-rental-st-antoni-de-calonge-spain-sea-view-06.jpg"
+  ],
+  "luxury": true,
+  "price": "vanaf £1.487 / week",
+  "id": "excellence-casa-llevant-calonge-st-antoni",
+  "source": "Excellence Luxury Villas",
+  "name": "Casa Llevant Calonge",
+  "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/spain/casa-llevant-calonge-st-antoni/",
+  "town": "Sant Antoni de Calonge",
+  "lat": 41.83725436749902,
+  "lng": 3.0919103094325395,
+  "persons": 10,
+  "offers": [
+   {
+    "source": "Excellence Luxury Villas",
+    "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/spain/casa-llevant-calonge-st-antoni/",
+    "price": "vanaf £1.487 / week"
+   }
+  ]
+ },
+ {
+  "area": "Fenals",
+  "personsMax": 10,
+  "bedrooms": 4,
+  "bathrooms": 2.0,
+  "beds": {},
+  "m2": 140,
+  "features": [
+   "dishwasher",
+   "seaView"
+  ],
+  "airco": "",
+  "seats": "",
+  "dist": {
+   "airport": 34000,
+   "supermarket": 300
+  },
+  "scores": {},
+  "groups": "onbekend",
+  "minAge": null,
+  "rating": null,
+  "reviews": 0,
+  "images": [
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevantada-lloret-luxury-beach-house-rental-lloret-de-mar-spain-beachfront-01.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevantada-lloret-luxury-beach-house-rental-lloret-de-mar-spain-beachfront-02.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevantada-lloret-luxury-beach-house-rental-lloret-de-mar-spain-beachfront-03.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevantada-lloret-luxury-beach-house-rental-lloret-de-mar-spain-beachfront-04.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevantada-lloret-luxury-beach-house-rental-lloret-de-mar-spain-beachfront-05.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-llevantada-lloret-luxury-beach-house-rental-lloret-de-mar-spain-beachfront-06.jpg"
+  ],
+  "luxury": true,
+  "price": "vanaf £928 / week",
+  "id": "excellence-casa-llevantada-lloret-de-mar",
+  "source": "Excellence Luxury Villas",
+  "name": "Casa Llevantada Lloret",
+  "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/lloret-de-mar/casa-llevantada-lloret-de-mar/",
+  "town": "Lloret de Mar",
+  "lat": 41.6954191,
+  "lng": 2.8363674,
+  "persons": 10,
+  "offers": [
+   {
+    "source": "Excellence Luxury Villas",
+    "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/lloret-de-mar/casa-llevantada-lloret-de-mar/",
+    "price": "vanaf £928 / week"
+   }
+  ]
+ },
+ {
+  "area": "",
+  "personsMax": 10,
+  "bedrooms": 5,
+  "bathrooms": 6.0,
+  "beds": {},
+  "m2": null,
+  "features": [
+   "airco",
+   "bbq",
+   "parking",
+   "privatePool",
+   "sauna",
+   "seaView"
+  ],
+  "airco": "Air-conditioning ensures comfort in every season, while the sleek, modern kitchen is perfect for both casual meals and gourmet feasts.",
+  "seats": "",
+  "dist": {
+   "supermarket": 3000
+  },
+  "scores": {},
+  "groups": "onbekend",
+  "minAge": null,
+  "rating": null,
+  "reviews": 0,
+  "images": [
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-tramuntana-lloret-luxury-5-bedroom-apartment-with-ocean-views-and-sauna-lloret-de-mar-01.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-tramuntana-lloret-luxury-5-bedroom-apartment-with-ocean-views-and-sauna-lloret-de-mar-02.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-tramuntana-lloret-luxury-5-bedroom-apartment-with-ocean-views-and-sauna-lloret-de-mar-03.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-tramuntana-lloret-luxury-5-bedroom-apartment-with-ocean-views-and-sauna-lloret-de-mar-04.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-tramuntana-lloret-luxury-5-bedroom-apartment-with-ocean-views-and-sauna-lloret-de-mar-05.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/casa-tramuntana-lloret-luxury-5-bedroom-apartment-with-ocean-views-and-sauna-lloret-de-mar-06.jpg"
+  ],
+  "luxury": true,
+  "price": "vanaf £5.887 / week",
+  "id": "excellence-casa-tramuntana-lloret",
+  "source": "Excellence Luxury Villas",
+  "name": "Casa Tramuntana Lloret",
+  "url": "https://excellenceluxuryvillas.com/townhouse-apartment-rentals/catalonia/girona-region/casa-tramuntana-lloret/",
+  "town": "Lloret de Mar",
+  "lat": 41.70485,
+  "lng": 2.88246,
+  "persons": 10,
+  "offers": [
+   {
+    "source": "Excellence Luxury Villas",
+    "url": "https://excellenceluxuryvillas.com/townhouse-apartment-rentals/catalonia/girona-region/casa-tramuntana-lloret/",
+    "price": "vanaf £5.887 / week"
+   }
+  ]
+ },
+ {
   "area": "Santa Maria de Llorell",
   "personsMax": 10,
   "bedrooms": 5,
@@ -4527,6 +4988,59 @@ window.HOUSES = [
   ]
  },
  {
+  "area": "",
+  "personsMax": 10,
+  "bedrooms": 5,
+  "bathrooms": 2.0,
+  "beds": {},
+  "m2": 220,
+  "features": [
+   "bbq",
+   "dishwasher",
+   "parking",
+   "privatePool"
+  ],
+  "airco": "",
+  "seats": "",
+  "dist": {
+   "beach": 15000,
+   "airport": 15000,
+   "supermarket": 3000,
+   "restaurant": 2000,
+   "nightlife": 6000
+  },
+  "scores": {},
+  "groups": "onbekend",
+  "minAge": null,
+  "rating": null,
+  "reviews": 0,
+  "images": [
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/finca-tramuntana-malavella-luxury-villa-rental-caldes-de-malavella-spain-with-private-pool-01.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/finca-tramuntana-malavella-luxury-villa-rental-caldes-de-malavella-spain-with-private-pool-02.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/finca-tramuntana-malavella-luxury-villa-rental-caldes-de-malavella-spain-with-private-pool-03.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/finca-tramuntana-malavella-luxury-villa-rental-caldes-de-malavella-spain-with-private-pool-04.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/finca-tramuntana-malavella-luxury-villa-rental-caldes-de-malavella-spain-with-private-pool-05.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/finca-tramuntana-malavella-luxury-villa-rental-caldes-de-malavella-spain-with-private-pool-06.jpg"
+  ],
+  "luxury": true,
+  "price": "vanaf £906 / week",
+  "id": "excellence-finca-tramuntana-malavella",
+  "source": "Excellence Luxury Villas",
+  "name": "Finca Tramuntana Malavella",
+  "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/caldes-de-malavella/finca-tramuntana-malavella/",
+  "town": "Caldes de Malavella",
+  "lat": 41.80572244476031,
+  "lng": 2.8492924576721634,
+  "persons": 10,
+  "offers": [
+   {
+    "source": "Excellence Luxury Villas",
+    "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/caldes-de-malavella/finca-tramuntana-malavella/",
+    "price": "vanaf £906 / week"
+   }
+  ]
+ },
+ {
   "area": "Lloret Blau",
   "personsMax": 10,
   "bedrooms": 4,
@@ -4984,57 +5498,6 @@ window.HOUSES = [
   ]
  },
  {
-  "area": "",
-  "personsMax": 10,
-  "bedrooms": 5,
-  "bathrooms": 4.0,
-  "beds": {
-   "Double": 6
-  },
-  "m2": null,
-  "features": [
-   "privatePool",
-   "bbq",
-   "parking",
-   "dishwasher"
-  ],
-  "airco": "",
-  "seats": "",
-  "dist": {
-   "beach": 2000
-  },
-  "scores": {},
-  "groups": "groepen ok",
-  "minAge": null,
-  "rating": null,
-  "reviews": 0,
-  "images": [
-   "https://www.clubvillamar.com/uploads/images/17317/69a8a6b191cb8/640x429/69a8a6b191cb8.jpg",
-   "https://www.clubvillamar.com/uploads/images/17317/69a8a6b28547d/640x429/69a8a6b28547d.jpg",
-   "https://www.clubvillamar.com/uploads/images/17317/69a8a6b3551e1/640x429/69a8a6b3551e1.jpg",
-   "https://www.clubvillamar.com/uploads/images/17317/69a8a6b3bb254/640x429/69a8a6b3bb254.jpg",
-   "https://www.clubvillamar.com/uploads/images/17317/69a8a6b4237aa/640x429/69a8a6b4237aa.jpg",
-   "https://www.clubvillamar.com/uploads/images/17317/69a8a6b4bc806/640x429/69a8a6b4bc806.jpg"
-  ],
-  "luxury": false,
-  "price": "vanaf €317 / nacht",
-  "id": "clubvillamar-palmar",
-  "source": "Club Villamar",
-  "name": "Palmar",
-  "url": "https://www.clubvillamar.com/villas/spain/costa-brava/tossa-de-mar/palmar",
-  "town": "Tossa de Mar",
-  "lat": 41.7214552,
-  "lng": 2.9221069,
-  "persons": 10,
-  "offers": [
-   {
-    "source": "Club Villamar",
-    "url": "https://www.clubvillamar.com/villas/spain/costa-brava/tossa-de-mar/palmar",
-    "price": "vanaf €317 / nacht"
-   }
-  ]
- },
- {
   "area": "Montbarbat",
   "personsMax": 10,
   "bedrooms": 4,
@@ -5094,7 +5557,7 @@ window.HOUSES = [
  },
  {
   "area": "La Montgoda",
-  "personsMax": 10,
+  "personsMax": 12,
   "bedrooms": 5,
   "bathrooms": 4.0,
   "beds": {
@@ -5103,21 +5566,22 @@ window.HOUSES = [
   },
   "m2": 194,
   "features": [
-   "privatePool",
    "airco",
    "aircoFree",
    "bbq",
+   "dishwasher",
    "parking",
-   "dishwasher"
+   "privatePool",
+   "seaView"
   ],
   "airco": "ja",
   "seats": "",
   "dist": {
    "beach": 900,
-   "supermarket": 2500,
+   "airport": 45000,
    "nightlife": 2500,
-   "restaurant": 2300,
-   "airport": 45000
+   "supermarket": 2500,
+   "restaurant": 2300
   },
   "scores": {},
   "groups": "geen groepen",
@@ -5132,7 +5596,7 @@ window.HOUSES = [
    "https://www.clubvillamar.com/uploads/images/722/5c8fa62d947f0/640x429/5c8fa62d947f0.jpg",
    "https://www.clubvillamar.com/uploads/images/722/5c8fa69042c5d/640x429/5c8fa69042c5d.jpg"
   ],
-  "luxury": false,
+  "luxury": true,
   "price": "vanaf €167 / nacht",
   "id": "clubvillamar-papagayo",
   "source": "Club Villamar",
@@ -5147,6 +5611,11 @@ window.HOUSES = [
     "source": "Club Villamar",
     "url": "https://www.clubvillamar.com/villas/spain/costa-brava/lloret-de-mar/papagayo",
     "price": "vanaf €167 / nacht"
+   },
+   {
+    "source": "Excellence Luxury Villas",
+    "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/lloret-de-mar/villa-levante-lloret-de-mar/",
+    "price": "vanaf £1.107 / week"
    }
   ]
  },
@@ -5765,6 +6234,62 @@ window.HOUSES = [
   ]
  },
  {
+  "area": "",
+  "personsMax": 10,
+  "bedrooms": 5,
+  "bathrooms": 4.0,
+  "beds": {},
+  "m2": null,
+  "features": [
+   "bbq",
+   "dishwasher",
+   "parking",
+   "privatePool"
+  ],
+  "airco": "",
+  "seats": "",
+  "dist": {
+   "beach": 2000,
+   "airport": 119000,
+   "supermarket": 800
+  },
+  "scores": {},
+  "groups": "geen groepen",
+  "minAge": null,
+  "rating": null,
+  "reviews": 0,
+  "images": [
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-tramuntana-tossa-luxury-villa-rental-tossa-de-mar-spain-with-private-pool-01.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-tramuntana-tossa-luxury-villa-rental-tossa-de-mar-spain-with-private-pool-02.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-tramuntana-tossa-luxury-villa-rental-tossa-de-mar-spain-with-private-pool-03.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-tramuntana-tossa-luxury-villa-rental-tossa-de-mar-spain-with-private-pool-04.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-tramuntana-tossa-luxury-villa-rental-tossa-de-mar-spain-with-private-pool-05.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2026/04/villa-tramuntana-tossa-luxury-villa-rental-tossa-de-mar-spain-with-private-pool-06.jpg"
+  ],
+  "luxury": true,
+  "price": "vanaf £1.862 / week",
+  "id": "excellence-villa-tramuntana-tossa-costa-brava",
+  "source": "Excellence Luxury Villas",
+  "name": "Villa Tramuntana Tossa",
+  "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/spain/villa-tramuntana-tossa-costa-brava/",
+  "town": "Tossa de Mar",
+  "lat": 41.72145520000001,
+  "lng": 2.9221069,
+  "persons": 10,
+  "offers": [
+   {
+    "source": "Excellence Luxury Villas",
+    "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/spain/villa-tramuntana-tossa-costa-brava/",
+    "price": "vanaf £1.862 / week"
+   },
+   {
+    "source": "Club Villamar",
+    "url": "https://www.clubvillamar.com/villas/spain/costa-brava/tossa-de-mar/palmar",
+    "price": "vanaf €317 / nacht"
+   }
+  ]
+ },
+ {
   "area": "Lloret Dalt",
   "personsMax": 14,
   "bedrooms": 5,
@@ -5825,6 +6350,52 @@ window.HOUSES = [
     "source": "CostaCabana",
     "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-valentina.html",
     "price": ""
+   }
+  ]
+ },
+ {
+  "area": "",
+  "personsMax": 10,
+  "bedrooms": 5,
+  "bathrooms": 5.0,
+  "beds": {},
+  "m2": null,
+  "features": [
+   "bbq",
+   "jacuzzi",
+   "sauna"
+  ],
+  "airco": "",
+  "seats": "",
+  "dist": {},
+  "scores": {},
+  "groups": "onbekend",
+  "minAge": null,
+  "rating": null,
+  "reviews": 0,
+  "images": [
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2023/11/Villa-Vines-Spain-1170x698.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2023/11/Villa-Vines-Spain-18.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2023/11/Villa-Vines-Spain-19.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2023/11/Villa-Vines-Spain-20.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2023/11/Villa-Vines-Spain-21.jpg",
+   "https://b3470997.assetcdn.net/2.0/3470997/wp-content/uploads/2023/11/Villa-Vines-Spain.jpg"
+  ],
+  "luxury": true,
+  "price": "vanaf £7.355 / week",
+  "id": "excellence-villa-vines-spain",
+  "source": "Excellence Luxury Villas",
+  "name": "Villa Vines",
+  "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/costa-brava/villa-vines-spain/",
+  "town": "Caldes de Malavella",
+  "lat": 41.858886,
+  "lng": 2.760524,
+  "persons": 10,
+  "offers": [
+   {
+    "source": "Excellence Luxury Villas",
+    "url": "https://excellenceluxuryvillas.com/luxury-villas-rentals/costa-brava/villa-vines-spain/",
+    "price": "vanaf £7.355 / week"
    }
   ]
  },
