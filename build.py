@@ -21,11 +21,40 @@ SITEMAP = "https://www.costacabana.nl/sitemap.xml"
 UA = "Mozilla/5.0 (lloret-huiszoeker; persoonlijk gebruik)"
 PROP_RE = re.compile(r"/vakantiehuis/spanje/costa-brava/([a-z-]+)/([a-z0-9-]+)\.html$")
 
+# Staan niet in de voorzieningentabel, dus we zoeken ze in de beschrijving
+KEYWORDS = {
+    "jacuzzi": r"jacuzzi|bubbelbad|whirlpool|hot ?tub",
+    "lift": r"\blift\b",
+    "sauna": r"\bsauna",
+    "seaView": r"zeezicht|uitzicht op (de )?zee",
+    "games": r"tafeltennis|ping ?pong|pooltafel|biljart|tafelvoetbal|voetbaltafel",
+    "sound": r"geluidsinstallatie|muziekinstallatie|geluid- en disco|speakers?\b",
+}
+DISTANCES = {
+    "Dichtstbijzijnde strand": "beach",
+    "Dichtstbijzijnde nachtleven / stadscentrum": "nightlife",
+    "Dichtstbijzijnde supermarkt": "supermarket",
+    "Dichtstbijzijnde restaurant": "restaurant",
+    "Dichtstbijzijnde luchthaven": "airport",
+}
+SCORES = {
+    "Privacy": "privacy",
+    "Uitzicht": "view",
+    "Comfort": "comfort",
+    "Rustige omgeving": "quiet",
+    "Sfeervol": "atmosphere",
+    "Tuin grootte": "garden",
+}
+
 
 def get(url):
     # curl i.p.v. urllib: de python.org-installatie op macOS mist vaak SSL-certificaten
     out = subprocess.run(["curl", "-sfL", "-A", UA, "--max-time", "30", url], capture_output=True, check=True)
     return out.stdout.decode("utf-8", "replace")
+
+
+def clean(s):
+    return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", s))).strip()
 
 
 def ld_blocks(page):
@@ -34,6 +63,24 @@ def ld_blocks(page):
             yield json.loads(m.group(1))
         except json.JSONDecodeError:
             pass
+
+
+def rows(page, tab, end):
+    """Leest de th/td-tabel uit een tabblad van de huispagina; sterren worden een getal."""
+    m = re.search(rf'id="{tab}">(.*?){end}', page, re.S)
+    out = {}
+    for k, v in re.findall(r"<th[^>]*>(.*?)</th>\s*<td>(.*?)</td>", m.group(1) if m else "", re.S):
+        stars = re.search(r'title="([\d.]+) stars"', v)
+        out[clean(k)] = float(stars.group(1)) if stars else clean(v)
+    return out
+
+
+def meters(value):
+    m = re.match(r"([\d.,]+)\s*(km|m)\b", str(value))
+    if not m:
+        return None
+    n = float(m.group(1).replace(",", "."))
+    return round(n * 1000 if m.group(2) == "km" else n)
 
 
 def group_policy(text):
@@ -51,6 +98,26 @@ def group_policy(text):
     return "onbekend", age
 
 
+def features(fac, text):
+    yes = lambda k: str(fac.get(k, "")).startswith("Ja")
+    airco = str(fac.get("Airconditioning", ""))
+    seats = str(fac.get("Eettafel", ""))
+    n_seats = re.search(r"\d+", seats)
+    found = {
+        "privatePool": "privé" in str(fac.get("Zwembad", "")),
+        "poolPrivate": fac.get("Zwembad zichtbaar voor buren") == "Nee",
+        "airco": airco.startswith("Ja"),
+        "aircoFree": "inbegrepen" in airco,
+        "bbq": yes("Barbecue"),
+        "parking": yes("Eigen parkeerplaats") or yes("Garage"),
+        "bigTable": "meer dan 10" in seats or bool(n_seats and int(n_seats.group()) >= 10),
+        "dishwasher": yes("Vaatwasmachine"),
+        "safe": yes("Kluis voor waardevolle spullen"),
+    }
+    found.update({k: bool(re.search(p, text)) for k, p in KEYWORDS.items()})
+    return sorted(k for k, v in found.items() if v)
+
+
 def parse(page, town, slug, url):
     rental = faq = None
     for d in ld_blocks(page):
@@ -62,7 +129,6 @@ def parse(page, town, slug, url):
         return None
 
     place = rental.get("containsPlace", {})
-    amen = {a["name"]: a["value"] for a in rental.get("amenityFeature", [])}
     desc = rental.get("description", {}).get("@value", "")
     area = re.search(r"Gelegen in ([^,]+),", desc)
     name = rental.get("name", {}).get("@value", slug).replace(" - CostaCabana", "")
@@ -75,6 +141,11 @@ def parse(page, town, slug, url):
     cap_txt = next((a for q, a in answers.items() if "huisvesten" in q), "")
     extra = re.search(r"toenemen tot (\d+)", cap_txt)
 
+    fac = rows(page, "facilities", 'id="distances"')
+    dist = rows(page, "distances", "</table>")
+    body = re.search(r'id="description">(.*?)id="facilities"', page, re.S)
+    text = (clean(body.group(1)) if body else desc).lower()
+
     beds = {b["typeOfBed"]: b["numberOfBeds"] for b in place.get("bed", [])}
     images = [re.sub(r"width=\d+,height=\d+", "width=640,height=360", i) for i in rental.get("image", [])[:6]]
     rating = rental.get("aggregateRating", {})
@@ -83,7 +154,6 @@ def parse(page, town, slug, url):
     return {
         "id": rental.get("identifier"),
         "name": html.unescape(name),
-        "type": rental.get("additionalType", ""),
         "url": url,
         "town": town.replace("-", " ").title().replace(" De ", " de "),
         "area": re.sub(r"^de urbanisatie ", "", area.group(1).strip()) if area else "",
@@ -95,10 +165,11 @@ def parse(page, town, slug, url):
         "bathrooms": place.get("numberOfBathroomsTotal"),
         "beds": beds,
         "m2": place.get("floorSize", {}).get("value"),
-        "pool": bool(amen.get("pool")),
-        "poolType": amen.get("poolType", ""),
-        "pets": bool(rental.get("petsAllowed")),
-        "aircoPaid": "tegen betaling" in answers.get(next((q for q in answers if "airconditioning" in q), ""), ""),
+        "features": features(fac, text),
+        "airco": str(fac.get("Airconditioning", "")),
+        "seats": str(fac.get("Eettafel", "")),
+        "dist": {key: meters(dist[label]) for label, key in DISTANCES.items() if meters(dist.get(label))},
+        "scores": {key: fac[label] for label, key in SCORES.items() if isinstance(fac.get(label), float)},
         "groups": policy,
         "minAge": min_age,
         "rating": rating.get("ratingValue"),

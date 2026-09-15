@@ -6,67 +6,90 @@
 <title>Lloret Huiszoeker · 24–31 juli</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --sea: #0b4f6c; --sea-2: #127a9c; --sand: #f6efe3; --sun: #ff7a3d;
-    --ink: #1c2530; --muted: #6b7684; --line: #e6dccb; --ok: #2f9e6b; --warn: #d9822b; --bad: #c4453c;
+    --sea: #0b4f6c; --sun: #ff7a3d; --ink: #17202a; --muted: #6b7684;
+    --line: #e7e9ec; --bg: #f6f6f4; --ok: #2f9e6b; --warn: #c7771f; --bad: #c4453c;
   }
   * { box-sizing: border-box; }
-  html, body { margin: 0; height: 100%; font-family: Inter, system-ui, sans-serif; color: var(--ink); background: var(--sand); }
-  .app { display: grid; grid-template-columns: 420px 1fr; height: 100vh; }
+  html, body { margin: 0; height: 100%; font-family: Inter, system-ui, sans-serif; color: var(--ink); background: var(--bg); }
+  .app { display: grid; grid-template-columns: 440px 1fr; height: 100vh; height: 100dvh; }
 
-  aside { display: flex; flex-direction: column; min-height: 0; border-right: 1px solid var(--line); background: var(--sand); }
-  header { padding: 18px 20px 14px; background: var(--sea); color: #fff; }
-  header h1 { font-family: "Bricolage Grotesque", sans-serif; font-weight: 800; font-size: 26px; margin: 0; letter-spacing: -.5px; }
+  aside { display: flex; flex-direction: column; min-height: 0; background: #fff; border-right: 1px solid var(--line); }
+  header { padding: 18px 20px 12px; }
+  header h1 { font-family: "Bricolage Grotesque", sans-serif; font-weight: 800; font-size: 24px; margin: 0; letter-spacing: -.5px; }
   header h1 span { color: var(--sun); }
-  header p { margin: 4px 0 0; font-size: 13px; opacity: .8; }
+  header p { margin: 2px 0 0; font-size: 13px; color: var(--muted); }
 
-  .filters { padding: 14px 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 12px; border-bottom: 1px solid var(--line); }
-  .filters label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .6px; color: var(--muted); display: flex; flex-direction: column; gap: 4px; }
-  .filters .full { grid-column: 1 / -1; }
-  input[type=search], select, input[type=number] {
-    font: inherit; font-size: 14px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: #fff; color: var(--ink); text-transform: none; letter-spacing: 0;
+  .filters { padding: 0 20px 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; border-bottom: 1px solid var(--line); max-height: 58vh; overflow-y: auto; }
+  .full { grid-column: 1 / -1; }
+  .filters label { font-size: 11px; font-weight: 600; color: var(--muted); display: flex; flex-direction: column; gap: 4px; }
+  input[type=search], input[type=number], select {
+    font: inherit; font-size: 14px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); width: 100%;
   }
+  input:focus, select:focus { outline: 2px solid var(--ink); outline-offset: -1px; }
+  summary { cursor: pointer; font-size: 13px; font-weight: 600; padding: 4px 0; list-style: none; display: flex; gap: 8px; align-items: center; }
+  summary::-webkit-details-marker { display: none; }
+  summary::before { content: '▸'; color: var(--muted); }
+  details[open] summary::before { content: '▾'; }
+  summary em { font-style: normal; font-weight: 500; color: var(--sun); }
   .chips { display: flex; flex-wrap: wrap; gap: 6px; }
-  .chip { font-size: 13px; padding: 6px 10px; border-radius: 999px; border: 1px solid var(--line); background: #fff; cursor: pointer; user-select: none; }
-  .chip.on { background: var(--sea); color: #fff; border-color: var(--sea); }
-  .count { padding: 8px 20px; font-size: 13px; color: var(--muted); display: flex; justify-content: space-between; }
+  details .chips { margin-top: 8px; }
+  .chip { font: inherit; font-size: 12.5px; padding: 6px 10px; border-radius: 999px; border: 1px solid var(--line); background: #fff; color: var(--ink); cursor: pointer; }
+  .chip small { color: var(--muted); margin-left: 5px; font-size: 11px; }
+  .chip:hover:not(:disabled) { border-color: var(--ink); }
+  .chip.on { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .chip:disabled { opacity: .35; cursor: default; }
 
-  .list { overflow-y: auto; padding: 4px 12px 20px; flex: 1; }
-  .card { display: grid; grid-template-columns: 116px 1fr; gap: 12px; padding: 10px; border-radius: 12px; cursor: pointer; margin-bottom: 6px; background: #fff; border: 1px solid transparent; transition: border-color .15s, transform .15s; }
-  .card:hover, .card.active { border-color: var(--sea-2); }
-  .card img { width: 116px; height: 84px; object-fit: cover; border-radius: 8px; background: var(--line); }
-  .card h3 { margin: 0 0 3px; font-size: 15px; font-family: "Bricolage Grotesque", sans-serif; font-weight: 800; display: flex; justify-content: space-between; gap: 6px; }
-  .star { background: none; border: 0; font-size: 18px; cursor: pointer; padding: 0; line-height: 1; color: #c9bda8; }
+  .bar { padding: 8px 20px; font-size: 13px; color: var(--muted); display: flex; justify-content: space-between; gap: 12px; }
+  .bar a { color: var(--ink); font-weight: 600; text-decoration: none; }
+  .bar a:hover { text-decoration: underline; }
+
+  .list { overflow-y: auto; padding: 0 12px 20px; flex: 1; background: var(--bg); }
+  .card { display: grid; grid-template-columns: 112px 1fr; gap: 12px; padding: 10px; border-radius: 14px; cursor: pointer; margin-top: 8px; background: #fff; border: 1px solid var(--line); }
+  .card:hover, .card.active { border-color: var(--ink); }
+  .card img { width: 112px; height: 84px; object-fit: cover; border-radius: 10px; background: var(--line); }
+  .card h3 { margin: 0 0 2px; font-size: 15px; font-weight: 700; display: flex; justify-content: space-between; gap: 6px; }
+  .star { background: none; border: 0; font-size: 18px; cursor: pointer; padding: 0; line-height: 1; color: #d0d4d9; }
   .star.on { color: var(--sun); }
-  .meta { font-size: 12.5px; color: var(--muted); line-height: 1.5; }
+  .meta { font-size: 12.5px; color: var(--muted); line-height: 1.55; }
   .meta b { color: var(--ink); font-weight: 600; }
-  .tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 1px 7px; border-radius: 999px; margin-top: 4px; margin-right: 3px; }
-  .tag.ok { background: #e0f3ea; color: var(--ok); } .tag.warn { background: #fbecdc; color: var(--warn); }
-  .tag.bad { background: #f7e1df; color: var(--bad); } .tag.neutral { background: #eef0f2; color: var(--muted); }
+  .tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 1px 7px; border-radius: 999px; margin: 4px 3px 0 0; background: #f0f2f4; color: var(--muted); }
+  .tag.ok { background: #e3f4ec; color: var(--ok); }
+  .tag.warn { background: #fbefe0; color: var(--warn); }
+  .tag.bad { background: #f8e3e1; color: var(--bad); }
 
-  #map { height: 100%; }
-  .pin { background: var(--sea); color: #fff; font: 700 12px Inter, sans-serif; border-radius: 999px; padding: 4px 8px; white-space: nowrap; border: 2px solid #fff; box-shadow: 0 2px 6px rgba(0,0,0,.3); transform: translate(-50%, -50%); position: absolute; }
-  .pin.fav { background: var(--sun); }
-  .pin.dim { background: #8c97a3; }
-  .pin.active { background: var(--ink); z-index: 1000; transform: translate(-50%, -50%) scale(1.2); }
+  #map { height: 100%; background: #f2f1ee; }
   .leaflet-div-icon { background: none; border: none; }
+  .pin {
+    position: absolute; transform: translate(-50%, -50%); background: #fff; color: var(--ink);
+    font: 700 12px Inter, sans-serif; border-radius: 999px; padding: 4px 9px; white-space: nowrap;
+    box-shadow: 0 1px 2px rgba(0,0,0,.14), 0 3px 10px rgba(0,0,0,.12); transition: transform .12s;
+  }
+  .pin:hover { transform: translate(-50%, -50%) scale(1.08); }
+  .pin.fav { background: var(--sun); color: #fff; }
+  .pin.active { background: var(--ink); color: #fff; transform: translate(-50%, -50%) scale(1.15); }
+  .place { position: absolute; transform: translate(-50%, -50%); font: 600 11px Inter, sans-serif; color: var(--sea); white-space: nowrap; text-shadow: 0 0 3px #fff, 0 0 3px #fff; }
+  .leaflet-control-zoom a { border-radius: 10px !important; }
 
-  .popup { width: 260px; font-family: Inter, sans-serif; }
-  .popup .gallery { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 4px; border-radius: 8px; }
-  .popup .gallery img { width: 260px; height: 146px; object-fit: cover; flex: none; scroll-snap-align: start; }
-  .popup h4 { font-family: "Bricolage Grotesque", sans-serif; font-size: 17px; margin: 8px 0 2px; }
-  .popup .btn { display: block; text-align: center; margin-top: 8px; padding: 9px; border-radius: 8px; background: var(--sun); color: #fff !important; text-decoration: none; font-weight: 600; }
+  .leaflet-popup-content-wrapper { border-radius: 14px; box-shadow: 0 6px 24px rgba(0,0,0,.18); }
   .leaflet-popup-content { margin: 10px; }
-
-  .legend { background: #fff; padding: 8px 10px; border-radius: 8px; font-size: 12px; box-shadow: 0 1px 4px rgba(0,0,0,.2); line-height: 1.7; }
-  .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+  .popup { width: 272px; font-family: Inter, sans-serif; }
+  .popup .gallery { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 4px; border-radius: 10px; }
+  .popup .gallery img { width: 272px; height: 153px; object-fit: cover; flex: none; scroll-snap-align: start; }
+  .popup h4 { font-size: 16px; margin: 8px 0 2px; }
+  .popup .grid { display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; font-size: 12px; margin: 8px 0 4px; }
+  .popup .grid span:nth-child(odd) { color: var(--muted); }
+  .popup .btn { display: block; text-align: center; margin-top: 10px; padding: 9px; border-radius: 10px; background: var(--ink); color: #fff !important; text-decoration: none; font-weight: 600; }
 
   @media (max-width: 800px) {
-    .app { grid-template-columns: 1fr; grid-template-rows: 45vh 55vh; }
-    aside { order: 2; border-right: 0; } #map { order: 1; }
-    header { padding: 10px 14px; } header h1 { font-size: 20px; }
+    .app { grid-template-columns: 1fr; grid-template-rows: 42vh 1fr; }
+    aside { order: 2; border-right: 0; min-height: 0; }
+    #map { order: 1; }
+    header { padding: 12px 14px 8px; }
+    header h1 { font-size: 20px; }
+    .filters { padding: 0 14px 10px; max-height: 32vh; }
   }
 </style>
 </head>
@@ -75,7 +98,7 @@
   <aside>
     <header>
       <h1>Lloret <span>Huiszoeker</span></h1>
-      <p>24 – 31 juli · villa's van CostaCabana op de kaart</p>
+      <p>24 – 31 juli · villa's van CostaCabana</p>
     </header>
     <div class="filters">
       <label class="full">Zoeken
@@ -88,8 +111,9 @@
         <select id="sort">
           <option value="persons">Meeste personen</option>
           <option value="beach">Dichtst bij strand</option>
-          <option value="center">Dichtst bij centrum</option>
+          <option value="nightlife">Dichtst bij uitgaan</option>
           <option value="rating">Beste beoordeling</option>
+          <option value="privacy">Meeste privacy</option>
           <option value="bedrooms">Meeste slaapkamers</option>
         </select>
       </label>
@@ -102,13 +126,34 @@
           <option value="">Alles tonen</option>
         </select>
       </label>
-      <div class="full chips">
-        <span class="chip on" data-f="pool">🏊 Zwembad</span>
-        <span class="chip" data-f="extra">➕ Extra bedden meetellen</span>
-        <span class="chip" data-f="favs">★ Alleen favorieten</span>
-      </div>
+      <label>Max. afstand strand
+        <select id="maxBeach">
+          <option value="">Maakt niet uit</option>
+          <option value="500">500 m</option>
+          <option value="1000">1 km</option>
+          <option value="2000">2 km</option>
+          <option value="3000">3 km</option>
+        </select>
+      </label>
+      <label>Max. afstand uitgaan
+        <select id="maxNight">
+          <option value="">Maakt niet uit</option>
+          <option value="500">500 m</option>
+          <option value="1000">1 km</option>
+          <option value="2000">2 km</option>
+          <option value="3000">3 km</option>
+        </select>
+      </label>
+      <div class="full chips" id="options"></div>
+      <details class="full" open>
+        <summary>Voorzieningen <em id="activeCount"></em></summary>
+        <div class="chips" id="chips"></div>
+      </details>
     </div>
-    <div class="count"><span id="count"></span><a href="#" id="share">Deel favorieten</a></div>
+    <div class="bar">
+      <span id="count"></span>
+      <span><a href="#" id="reset">Reset</a> · <a href="#" id="share">Deel favorieten</a></span>
+    </div>
     <div class="list" id="list"></div>
   </aside>
   <div id="map"></div>
@@ -117,19 +162,33 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="data.js"></script>
 <script>
+const CARTO_KEY = 'cb1_3m37_1_94fd0036e892ecc35d0d9953';
 const BEACH = [41.6977, 2.8460];   // Platja de Lloret (midden)
-const CENTER = [41.6995, 2.8456];  // Plaça de la Vila
 const FAV_KEY = 'lloret-favs';
 
+const OPTIONS = { extra: 'Extra bedden meetellen', favs: 'Alleen favorieten' };
+const FEATURES = {
+  privatePool: 'Privézwembad',
+  poolPrivate: 'Zwembad niet inkijkbaar',
+  airco: 'Airco',
+  aircoFree: 'Airco inbegrepen',
+  bbq: 'Barbecue',
+  parking: 'Eigen parkeerplaats',
+  bigTable: 'Eettafel 10+',
+  games: 'Pool / tafeltennis',
+  sound: 'Muziekinstallatie',
+  jacuzzi: 'Jacuzzi',
+  sauna: 'Sauna',
+  lift: 'Lift',
+  seaView: 'Zeezicht',
+  dishwasher: 'Vaatwasser',
+  safe: 'Kluis',
+};
+
 const $ = s => document.querySelector(s);
-const state = { pool: true, extra: false, favs: false, active: null };
-let favs = new Set(JSON.parse(localStorage.getItem(FAV_KEY) || '[]'));
-
-// Favorieten kunnen gedeeld worden via ?fav=id1,id2
-const shared = new URLSearchParams(location.search).get('fav');
-if (shared) { shared.split(',').forEach(id => favs.add(id)); saveFavs(); }
-
-function saveFavs() { localStorage.setItem(FAV_KEY, JSON.stringify([...favs])); }
+const state = { extra: false, favs: false, need: new Set(), active: null };
+const favs = new Set(JSON.parse(localStorage.getItem(FAV_KEY) || '[]'));
+const saveFavs = () => localStorage.setItem(FAV_KEY, JSON.stringify([...favs]));
 
 function km(a, b) {
   const R = 6371, r = Math.PI / 180;
@@ -137,15 +196,19 @@ function km(a, b) {
   const x = Math.sin(dLat / 2) ** 2 + Math.cos(a[0] * r) * Math.cos(b[0] * r) * Math.sin(dLng / 2) ** 2;
   return 2 * R * Math.asin(Math.sqrt(x));
 }
-const fmtKm = d => d < 1 ? `${Math.round(d * 1000 / 50) * 50} m` : `${d.toFixed(1)} km`;
+const fmtM = m => m < 1000 ? `${Math.round(m / 50) * 50} m` : `${(m / 1000).toFixed(1)} km`;
+const stars = n => n ? '★'.repeat(Math.round(n)) + '☆'.repeat(5 - Math.round(n)) : '';
+const persons = h => `${h.persons}${h.personsMax > h.persons ? `–${h.personsMax}` : ''}`;
 
+// Afstanden van de site zelf; valt terug op hemelsbrede afstand tot het strand
 const houses = window.HOUSES.map(h => ({
   ...h,
-  beach: km([h.lat, h.lng], BEACH),
-  center: km([h.lat, h.lng], CENTER),
+  beachM: h.dist.beach ?? Math.round(km([h.lat, h.lng], BEACH) * 1000),
+  nightM: h.dist.nightlife ?? null,
 }));
 
-[...new Set(houses.map(h => h.town))].sort().forEach(t => $('#town').add(new Option(t, t, false, t === 'Lloret de Mar')));
+[...new Set(houses.map(h => h.town))].sort()
+  .forEach(t => $('#town').add(new Option(t, t, false, t === 'Lloret de Mar')));
 
 function groupTag(h) {
   const age = h.minAge ? ` · gem. ${h.minAge}+` : '';
@@ -153,64 +216,72 @@ function groupTag(h) {
     case 'groepen ok': return `<span class="tag ok">Groepen welkom${age}</span>`;
     case 'gemengde groepen': return `<span class="tag warn">Alleen gemengde groepen${age}</span>`;
     case 'geen groepen': return `<span class="tag bad">Geen groepen</span>`;
-    default: return `<span class="tag neutral">Groepsbeleid: check site</span>`;
+    default: return `<span class="tag">Groepsbeleid: check site</span>`;
   }
 }
 
-function filtered() {
+// withFeature: tel alvast mee alsof die voorziening ook aangevinkt is (voor de aantallen op de chips)
+function filtered(withFeature) {
   const q = $('#q').value.trim().toLowerCase();
   const min = +$('#persons').value || 0;
   const town = $('#town').value;
   const groups = $('#groups').value;
-  const list = houses.filter(h =>
+  const maxBeach = +$('#maxBeach').value || Infinity;
+  const maxNight = +$('#maxNight').value || Infinity;
+  const need = withFeature ? [...state.need, withFeature] : [...state.need];
+  return houses.filter(h =>
     (state.extra ? h.personsMax : h.persons) >= min &&
     (!town || h.town === town) &&
-    (!state.pool || h.pool) &&
-    (!state.favs || favs.has(h.id)) &&
     (groups !== 'friends' || h.groups !== 'geen groepen') &&
+    (!state.favs || favs.has(h.id)) &&
+    h.beachM <= maxBeach &&
+    (maxNight === Infinity || (h.nightM != null && h.nightM <= maxNight)) &&
+    need.every(f => h.features.includes(f)) &&
     (!q || `${h.name} ${h.area} ${h.town}`.toLowerCase().includes(q))
   );
-  const by = {
-    persons: (a, b) => b.persons - a.persons || a.beach - b.beach,
-    beach: (a, b) => a.beach - b.beach,
-    center: (a, b) => a.center - b.center,
-    rating: (a, b) => (b.rating || 0) - (a.rating || 0) || b.reviews - a.reviews,
-    bedrooms: (a, b) => b.bedrooms - a.bedrooms,
-  }[$('#sort').value];
-  return list.sort(by);
 }
+
+const SORTS = {
+  persons: (a, b) => b.persons - a.persons || a.beachM - b.beachM,
+  beach: (a, b) => a.beachM - b.beachM,
+  nightlife: (a, b) => (a.nightM ?? 1e9) - (b.nightM ?? 1e9),
+  rating: (a, b) => (b.rating || 0) - (a.rating || 0) || b.reviews - a.reviews,
+  privacy: (a, b) => (b.scores.privacy || 0) - (a.scores.privacy || 0),
+  bedrooms: (a, b) => b.bedrooms - a.bedrooms,
+};
 
 // ---------- Kaart ----------
 const map = L.map('map', { zoomControl: false }).setView([41.703, 2.845], 14);
 L.control.zoom({ position: 'topright' }).addTo(map);
-const CARTO_KEY = 'cb1_3m37_1_94fd0036e892ecc35d0d9953';
-L.tileLayer(`https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png?key=${CARTO_KEY}`, {
-  maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attributions">CARTO</a>',
+L.tileLayer(`https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=${CARTO_KEY}`, {
+  maxZoom: 19,
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attributions">CARTO</a>',
 }).addTo(map);
+L.marker(BEACH, { icon: L.divIcon({ html: '<div class="place">Platja de Lloret</div>' }), interactive: false }).addTo(map);
 
-L.marker(BEACH, { icon: L.divIcon({ html: '<div style="font-size:22px;transform:translate(-50%,-50%);position:absolute">🏖️</div>' }) })
-  .addTo(map).bindTooltip('Platja de Lloret');
+const BED_NAMES = { Single: 'enkel', Double: 'dubbel', King: 'kingsize', Queen: 'queen', SofaBed: 'slaapbank', Bunk: 'stapelbed' };
 
-const legend = L.control({ position: 'bottomright' });
-legend.onAdd = () => Object.assign(L.DomUtil.create('div', 'legend'), {
-  innerHTML: '<i style="background:#0b4f6c"></i>Past bij filters<br><i style="background:#ff7a3d"></i>Favoriet<br>Getal = max. personen',
-});
-legend.addTo(map);
-
-const markers = {};
 function popupHtml(h) {
-  const beds = Object.entries(h.beds).map(([k, v]) => `${v}× ${{ Single: 'enkel', Double: 'dubbel', King: 'kingsize', Queen: 'queen', Sofa: 'slaapbank', SofaBed: 'slaapbank', Bunk: 'stapelbed' }[k] || k}`).join(', ');
+  const beds = Object.entries(h.beds).map(([k, v]) => `${v}× ${BED_NAMES[k] || k}`).join(', ');
+  const row = (label, v) => v ? `<span>${label}</span><span>${v}</span>` : '';
+  const feats = Object.entries(FEATURES).filter(([k]) => h.features.includes(k));
   return `<div class="popup">
-    <div class="gallery">${h.images.map(i => `<img loading="lazy" src="${i}">`).join('')}</div>
+    <div class="gallery">${h.images.map(i => `<img loading="lazy" src="${i}" alt="">`).join('')}</div>
     <h4>${h.name}</h4>
-    <div class="meta">
-      <b>${h.persons}${h.personsMax > h.persons ? `–${h.personsMax}` : ''} pers.</b> · ${h.bedrooms} slpk · ${h.bathrooms} badk${h.m2 ? ` · ${h.m2} m²` : ''}<br>
-      ${h.pool ? '🏊 Privézwembad' : 'Geen zwembad'}${h.aircoPaid ? ' · airco tegen betaling' : ''}<br>
-      🏖️ ${fmtKm(h.beach)} tot strand · 📍 ${h.area || h.town}<br>
-      ${beds ? `🛏️ ${beds}<br>` : ''}
-      ${h.rating ? `⭐ ${h.rating} (${h.reviews} reviews)<br>` : ''}
-      ${groupTag(h)}
+    <div class="meta"><b>${persons(h)} pers.</b> · ${h.bedrooms} slaapkamers · ${h.bathrooms} badkamers${h.m2 ? ` · ${h.m2} m²` : ''}</div>
+    <div class="grid">
+      ${row('Strand', fmtM(h.beachM))}
+      ${row('Uitgaan', h.nightM != null && fmtM(h.nightM))}
+      ${row('Supermarkt', h.dist.supermarket != null && fmtM(h.dist.supermarket))}
+      ${row('Wijk', h.area || h.town)}
+      ${row('Bedden', beds)}
+      ${row('Eettafel', h.seats.replace(/^Ja,?\s*/, ''))}
+      ${row('Airco', h.airco && (h.airco.replace(/^Ja,?\s*/, '') || 'ja'))}
+      ${row('Privacy', stars(h.scores.privacy))}
+      ${row('Uitzicht', stars(h.scores.view))}
+      ${row('Reviews', h.rating && `${h.rating} / 5 (${h.reviews})`)}
     </div>
+    <div>${feats.map(([, label]) => `<span class="tag">${label}</span>`).join('')}${groupTag(h)}</div>
     <a class="btn" href="${h.url}" target="_blank" rel="noopener">Check 24–31 juli op CostaCabana →</a>
   </div>`;
 }
@@ -220,26 +291,39 @@ function pinIcon(h) {
   return L.divIcon({ html: `<div class="${cls}">${h.persons}</div>`, iconSize: [0, 0] });
 }
 
+const markers = {};
 function select(id, pan) {
   const prev = state.active;
   state.active = id;
-  [prev, id].forEach(x => x && markers[x] && markers[x].setIcon(pinIcon(houses.find(h => h.id === x))));
+  [prev, id].forEach(x => markers[x]?.setIcon(pinIcon(houses.find(h => h.id === x))));
   document.querySelectorAll('.card').forEach(c => c.classList.toggle('active', c.dataset.id === id));
   const m = markers[id];
   if (m && pan) { map.setView(m.getLatLng(), Math.max(map.getZoom(), 15)); m.openPopup(); }
   document.querySelector(`.card[data-id="${id}"]`)?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
 }
 
-// ---------- Lijst ----------
+// ---------- Filters & lijst ----------
+function renderChips() {
+  $('#options').innerHTML = Object.entries(OPTIONS)
+    .map(([k, label]) => `<button class="chip ${state[k] ? 'on' : ''}" data-option="${k}">${label}</button>`).join('');
+  $('#chips').innerHTML = Object.entries(FEATURES).map(([k, label]) => {
+    const on = state.need.has(k);
+    const n = on ? 0 : filtered(k).length;
+    return `<button class="chip ${on ? 'on' : ''}" data-feature="${k}" ${!on && !n ? 'disabled' : ''}>${label}${on ? '' : `<small>${n}</small>`}</button>`;
+  }).join('');
+  $('#activeCount').textContent = state.need.size ? `${state.need.size} aan` : '';
+}
+
 function render(fit) {
-  const list = filtered();
+  renderChips();
+  const list = filtered().sort(SORTS[$('#sort').value]);
   const ids = new Set(list.map(h => h.id));
 
   for (const [id, m] of Object.entries(markers)) if (!ids.has(id)) { map.removeLayer(m); delete markers[id]; }
   for (const h of list) {
     if (markers[h.id]) { markers[h.id].setIcon(pinIcon(h)); continue; }
     markers[h.id] = L.marker([h.lat, h.lng], { icon: pinIcon(h), riseOnHover: true })
-      .bindPopup(() => popupHtml(h), { maxWidth: 280 })
+      .bindPopup(() => popupHtml(h), { maxWidth: 300 })
       .on('click', () => select(h.id, false))
       .addTo(map);
   }
@@ -251,41 +335,61 @@ function render(fit) {
       <div>
         <h3>${h.name}<button class="star ${favs.has(h.id) ? 'on' : ''}" data-star="${h.id}" title="Favoriet">★</button></h3>
         <div class="meta">
-          <b>${h.persons}${h.personsMax > h.persons ? `–${h.personsMax}` : ''} pers.</b> · ${h.bedrooms} slpk · ${h.bathrooms} badk${h.pool ? ' · 🏊' : ''}<br>
-          🏖️ ${fmtKm(h.beach)} · ${h.area || h.town}${h.rating ? ` · ⭐ ${h.rating}` : ''}
+          <b>${persons(h)} pers.</b> · ${h.bedrooms} slpk · ${h.bathrooms} badk<br>
+          ${fmtM(h.beachM)} tot strand · ${h.area || h.town}${h.rating ? ` · ★ ${h.rating}` : ''}
         </div>
         ${groupTag(h)}
       </div>
-    </div>`).join('') || '<p class="meta" style="padding:20px">Niets gevonden. Probeer minder filters.</p>';
+    </div>`).join('') || '<p class="meta" style="padding:20px">Niets gevonden. Zet een paar filters uit.</p>';
 
-  if (fit && list.length) map.fitBounds(L.latLngBounds(list.map(h => [h.lat, h.lng])), { padding: [40, 40], maxZoom: 16 });
+  if (fit && list.length) map.fitBounds(L.latLngBounds(list.map(h => [h.lat, h.lng])), { padding: [50, 50], maxZoom: 16 });
 }
+
+$('.filters').addEventListener('click', e => {
+  const chip = e.target.closest('.chip');
+  if (!chip) return;
+  if (chip.dataset.option) state[chip.dataset.option] = !state[chip.dataset.option];
+  if (chip.dataset.feature) {
+    const f = chip.dataset.feature;
+    state.need.has(f) ? state.need.delete(f) : state.need.add(f);
+  }
+  render(true);
+});
 
 $('#list').addEventListener('click', e => {
   const star = e.target.closest('[data-star]');
   if (star) {
     const id = star.dataset.star;
     favs.has(id) ? favs.delete(id) : favs.add(id);
-    saveFavs(); render(false); return;
+    saveFavs();
+    render(false);
+    return;
   }
   const card = e.target.closest('.card');
   if (card) select(card.dataset.id, true);
 });
 
-document.querySelectorAll('.chip').forEach(c => c.addEventListener('click', () => {
-  state[c.dataset.f] = !state[c.dataset.f];
-  c.classList.toggle('on', state[c.dataset.f]);
-  render(true);
-}));
 ['#q', '#persons'].forEach(s => $(s).addEventListener('input', () => render(true)));
-['#sort', '#town', '#groups'].forEach(s => $(s).addEventListener('change', () => render(s !== '#sort')));
+['#town', '#groups', '#maxBeach', '#maxNight'].forEach(s => $(s).addEventListener('change', () => render(true)));
+$('#sort').addEventListener('change', () => render(false));
+
+$('#reset').addEventListener('click', e => {
+  e.preventDefault();
+  state.need.clear();
+  state.extra = state.favs = false;
+  $('#q').value = '';
+  $('#persons').value = 12;
+  $('#town').value = 'Lloret de Mar';
+  ['#groups', '#sort', '#maxBeach', '#maxNight'].forEach(s => $(s).selectedIndex = 0);
+  render(true);
+});
 
 $('#share').addEventListener('click', async e => {
   e.preventDefault();
   if (!favs.size) return alert('Markeer eerst een paar huizen met ★');
-  const text = [...favs].map(id => houses.find(h => h.id === id)).filter(Boolean)
-    .map(h => `★ ${h.name} (${h.persons} pers.) – ${h.url}`).join('\n');
-  await navigator.clipboard.writeText(`Onze favorieten voor Lloret, 24–31 juli:\n${text}`);
+  const text = houses.filter(h => favs.has(h.id))
+    .map(h => `★ ${h.name} (${persons(h)} pers.) – ${h.url}`).join('\n');
+  await navigator.clipboard.writeText(`Onze favorieten voor Lloret, 24–31 juli:\n${text}\n\nKaart: ${location.href.split('#')[0]}`);
   alert('Gekopieerd! Plak het in de groepsapp.');
 });
 

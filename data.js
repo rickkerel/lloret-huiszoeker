@@ -1,9 +1,8 @@
-// Gegenereerd door build.py op 2026-09-15 16:38
+// Gegenereerd door build.py op 2026-09-15 16:49
 window.HOUSES = [
  {
   "id": "1128",
   "name": "Villa Can Bernardi",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/vidreres/villa-can-bernardi.html",
   "town": "Vidreres",
   "area": "Countryside",
@@ -15,10 +14,35 @@ window.HOUSES = [
   "bathrooms": 7,
   "beds": {},
   "m2": 450,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": true,
-  "aircoPaid": false,
+  "features": [
+   "airco",
+   "aircoFree",
+   "bbq",
+   "bigTable",
+   "dishwasher",
+   "games",
+   "parking",
+   "privatePool",
+   "sauna",
+   "sound"
+  ],
+  "airco": "Ja, inbegrepen, diverse ruimtes",
+  "seats": "Ja, meer dan 10 zitplaatsen",
+  "dist": {
+   "beach": 16300,
+   "nightlife": 16000,
+   "supermarket": 3300,
+   "restaurant": 2300,
+   "airport": 14500
+  },
+  "scores": {
+   "privacy": 4.5,
+   "view": 3.5,
+   "comfort": 4.0,
+   "quiet": 4.5,
+   "atmosphere": 4.5,
+   "garden": 5.0
+  },
   "groups": "geen groepen",
   "minAge": null,
   "rating": 3,
@@ -35,7 +59,6 @@ window.HOUSES = [
  {
   "id": "1102",
   "name": "Villa Pilar",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/casa-pilar.html",
   "town": "Lloret de Mar",
   "area": "Lloret Center",
@@ -50,10 +73,30 @@ window.HOUSES = [
    "Double": 2
   },
   "m2": 240,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": false,
-  "aircoPaid": false,
+  "features": [
+   "bbq",
+   "bigTable",
+   "dishwasher",
+   "parking",
+   "safe"
+  ],
+  "airco": "",
+  "seats": "Ja, meer dan 10 zitplaatsen",
+  "dist": {
+   "beach": 500,
+   "nightlife": 900,
+   "supermarket": 450,
+   "restaurant": 500,
+   "airport": 29300
+  },
+  "scores": {
+   "privacy": 3.5,
+   "view": 2.5,
+   "comfort": 2.5,
+   "quiet": 3.5,
+   "atmosphere": 3.5,
+   "garden": 3.5
+  },
   "groups": "groepen ok",
   "minAge": 18,
   "rating": 4,
@@ -70,7 +113,6 @@ window.HOUSES = [
  {
   "id": "1027",
   "name": "Villa Jaruco",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-jaruco.html",
   "town": "Lloret de Mar",
   "area": "Condado del Jaruco",
@@ -85,10 +127,31 @@ window.HOUSES = [
    "Double": 8
   },
   "m2": 460,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": true,
-  "aircoPaid": false,
+  "features": [
+   "bbq",
+   "bigTable",
+   "dishwasher",
+   "games",
+   "parking",
+   "privatePool"
+  ],
+  "airco": "",
+  "seats": "Ja, meer dan 10 zitplaatsen",
+  "dist": {
+   "beach": 2900,
+   "nightlife": 2900,
+   "supermarket": 600,
+   "restaurant": 800,
+   "airport": 26500
+  },
+  "scores": {
+   "privacy": 4.0,
+   "view": 3.5,
+   "comfort": 3.0,
+   "quiet": 4.0,
+   "atmosphere": 3.5,
+   "garden": 4.5
+  },
   "groups": "groepen ok",
   "minAge": 18,
   "rating": 3.5,
@@ -105,7 +168,6 @@ window.HOUSES = [
  {
   "id": "1016",
   "name": "Villa Geolouk",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-geolouk.html",
   "town": "Lloret de Mar",
   "area": "Aigua Viva Park",
@@ -120,10 +182,30 @@ window.HOUSES = [
    "Double": 4
   },
   "m2": 400,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": true,
-  "aircoPaid": false,
+  "features": [
+   "bbq",
+   "bigTable",
+   "jacuzzi",
+   "parking",
+   "privatePool"
+  ],
+  "airco": "",
+  "seats": "Ja, meer dan 10 zitplaatsen",
+  "dist": {
+   "beach": 9000,
+   "nightlife": 7000,
+   "supermarket": 2000,
+   "restaurant": 2000,
+   "airport": 22000
+  },
+  "scores": {
+   "privacy": 4.5,
+   "view": 3.0,
+   "comfort": 3.5,
+   "quiet": 4.0,
+   "atmosphere": 4.0,
+   "garden": 4.0
+  },
   "groups": "gemengde groepen",
   "minAge": 21,
   "rating": 3.5,
@@ -140,7 +222,6 @@ window.HOUSES = [
  {
   "id": "1099",
   "name": "Villa Nicky",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-nicky.html",
   "town": "Lloret de Mar",
   "area": "Condado del Jaruco",
@@ -155,10 +236,30 @@ window.HOUSES = [
    "Double": 2
   },
   "m2": 250,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": true,
-  "aircoPaid": false,
+  "features": [
+   "bbq",
+   "dishwasher",
+   "games",
+   "privatePool",
+   "safe"
+  ],
+  "airco": "",
+  "seats": "Ja, 6 zitplaatsen",
+  "dist": {
+   "beach": 2800,
+   "nightlife": 2600,
+   "supermarket": 650,
+   "restaurant": 800,
+   "airport": 26500
+  },
+  "scores": {
+   "privacy": 4.0,
+   "view": 3.0,
+   "comfort": 4.0,
+   "quiet": 4.0,
+   "atmosphere": 4.0,
+   "garden": 3.5
+  },
   "groups": "groepen ok",
   "minAge": 18,
   "rating": 3.5,
@@ -175,7 +276,6 @@ window.HOUSES = [
  {
   "id": "1101",
   "name": "Villa Ashley",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-ashley.html",
   "town": "Lloret de Mar",
   "area": "Condado del Jaruco",
@@ -190,10 +290,30 @@ window.HOUSES = [
    "Double": 6
   },
   "m2": 350,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": true,
-  "aircoPaid": false,
+  "features": [
+   "bbq",
+   "bigTable",
+   "dishwasher",
+   "games",
+   "privatePool"
+  ],
+  "airco": "",
+  "seats": "Ja, meer dan 10 zitplaatsen",
+  "dist": {
+   "beach": 2500,
+   "nightlife": 3000,
+   "supermarket": 400,
+   "restaurant": 400,
+   "airport": 35000
+  },
+  "scores": {
+   "privacy": 3.5,
+   "view": 3.0,
+   "comfort": 3.5,
+   "quiet": 3.5,
+   "atmosphere": 4.0,
+   "garden": 3.5
+  },
   "groups": "groepen ok",
   "minAge": 18,
   "rating": 4,
@@ -210,7 +330,6 @@ window.HOUSES = [
  {
   "id": "1281",
   "name": "Villa Grace",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/blanes/villa-grace.html",
   "town": "Blanes",
   "area": "Mas Mora",
@@ -225,10 +344,29 @@ window.HOUSES = [
    "Double": 4
   },
   "m2": 480,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": false,
-  "aircoPaid": false,
+  "features": [
+   "bbq",
+   "dishwasher",
+   "parking",
+   "privatePool"
+  ],
+  "airco": "",
+  "seats": "Ja, 8 zitplaatsen",
+  "dist": {
+   "beach": 7400,
+   "nightlife": 7600,
+   "supermarket": 6000,
+   "restaurant": 4900,
+   "airport": 27900
+  },
+  "scores": {
+   "privacy": 4.0,
+   "view": 4.0,
+   "comfort": 4.5,
+   "quiet": 4.0,
+   "atmosphere": 4.0,
+   "garden": 4.0
+  },
   "groups": "gemengde groepen",
   "minAge": 24,
   "rating": 4,
@@ -245,7 +383,6 @@ window.HOUSES = [
  {
   "id": "1247",
   "name": "Villa Madonna",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-madonna.html",
   "town": "Lloret de Mar",
   "area": "Condado del Jaruco",
@@ -261,10 +398,30 @@ window.HOUSES = [
    "King": 1
   },
   "m2": 250,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": true,
-  "aircoPaid": true,
+  "features": [
+   "airco",
+   "bbq",
+   "dishwasher",
+   "privatePool",
+   "safe"
+  ],
+  "airco": "Ja, tegen vergoeding, diverse ruimtes",
+  "seats": "Ja, 6 zitplaatsen",
+  "dist": {
+   "beach": 2200,
+   "nightlife": 2300,
+   "supermarket": 1300,
+   "restaurant": 450,
+   "airport": 30000
+  },
+  "scores": {
+   "privacy": 4.0,
+   "view": 3.5,
+   "comfort": 4.0,
+   "quiet": 3.5,
+   "atmosphere": 4.0,
+   "garden": 4.0
+  },
   "groups": "groepen ok",
   "minAge": 18,
   "rating": 4,
@@ -281,7 +438,6 @@ window.HOUSES = [
  {
   "id": "1467",
   "name": "Villa Marysol",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-marysol.html",
   "town": "Lloret de Mar",
   "area": "Rocca Grossa",
@@ -296,10 +452,29 @@ window.HOUSES = [
    "Double": 2
   },
   "m2": 300,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": false,
-  "aircoPaid": false,
+  "features": [
+   "bbq",
+   "dishwasher",
+   "parking",
+   "privatePool"
+  ],
+  "airco": "",
+  "seats": "",
+  "dist": {
+   "beach": 2100,
+   "nightlife": 2200,
+   "supermarket": 1300,
+   "restaurant": 1500,
+   "airport": 30600
+  },
+  "scores": {
+   "privacy": 4.0,
+   "view": 4.0,
+   "comfort": 4.0,
+   "quiet": 3.5,
+   "atmosphere": 4.0,
+   "garden": 4.0
+  },
   "groups": "groepen ok",
   "minAge": 18,
   "rating": 4,
@@ -316,7 +491,6 @@ window.HOUSES = [
  {
   "id": "1465",
   "name": "Villa Summertime",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-summertime.html",
   "town": "Lloret de Mar",
   "area": "Lloret Center",
@@ -332,10 +506,31 @@ window.HOUSES = [
    "King": 1
   },
   "m2": 200,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": true,
-  "aircoPaid": true,
+  "features": [
+   "airco",
+   "bbq",
+   "bigTable",
+   "dishwasher",
+   "parking",
+   "privatePool"
+  ],
+  "airco": "Ja, tegen vergoeding, diverse ruimtes",
+  "seats": "Ja, 10 zitplaatsen",
+  "dist": {
+   "beach": 800,
+   "nightlife": 500,
+   "supermarket": 250,
+   "restaurant": 150,
+   "airport": 31000
+  },
+  "scores": {
+   "privacy": 4.0,
+   "view": 3.5,
+   "comfort": 4.5,
+   "quiet": 3.0,
+   "atmosphere": 4.0,
+   "garden": 4.5
+  },
   "groups": "groepen ok",
   "minAge": 18,
   "rating": 4.5,
@@ -352,7 +547,6 @@ window.HOUSES = [
  {
   "id": "1015",
   "name": "Villa Estrella",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-estrella.html",
   "town": "Lloret de Mar",
   "area": "Montgoda",
@@ -367,10 +561,29 @@ window.HOUSES = [
    "Double": 5
   },
   "m2": 200,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": true,
-  "aircoPaid": false,
+  "features": [
+   "bbq",
+   "dishwasher",
+   "parking",
+   "privatePool"
+  ],
+  "airco": "",
+  "seats": "Ja, 6 zitplaatsen",
+  "dist": {
+   "beach": 850,
+   "nightlife": 2500,
+   "supermarket": 1000,
+   "restaurant": 1000,
+   "airport": 32600
+  },
+  "scores": {
+   "privacy": 4.5,
+   "view": 4.5,
+   "comfort": 4.0,
+   "quiet": 4.5,
+   "atmosphere": 4.0,
+   "garden": 4.5
+  },
   "groups": "groepen ok",
   "minAge": 18,
   "rating": 4,
@@ -387,7 +600,6 @@ window.HOUSES = [
  {
   "id": "1462",
   "name": "Villa Maribel",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-maribel.html",
   "town": "Lloret de Mar",
   "area": "Rocca Grossa",
@@ -402,10 +614,29 @@ window.HOUSES = [
    "Double": 4
   },
   "m2": 225,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": true,
-  "aircoPaid": false,
+  "features": [
+   "bbq",
+   "bigTable",
+   "dishwasher",
+   "privatePool"
+  ],
+  "airco": "",
+  "seats": "Ja, 10 zitplaatsen",
+  "dist": {
+   "beach": 1500,
+   "nightlife": 1500,
+   "supermarket": 750,
+   "restaurant": 950,
+   "airport": 31000
+  },
+  "scores": {
+   "privacy": 4.0,
+   "view": 4.0,
+   "comfort": 4.0,
+   "quiet": 4.0,
+   "atmosphere": 4.0,
+   "garden": 4.0
+  },
   "groups": "groepen ok",
   "minAge": 18,
   "rating": 4,
@@ -422,7 +653,6 @@ window.HOUSES = [
  {
   "id": "1357",
   "name": "Villa Dolce Vita",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-dolce-vita.html",
   "town": "Lloret de Mar",
   "area": "Lloret Center",
@@ -436,10 +666,32 @@ window.HOUSES = [
    "Single": 13
   },
   "m2": 180,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": true,
-  "aircoPaid": true,
+  "features": [
+   "airco",
+   "bbq",
+   "dishwasher",
+   "lift",
+   "parking",
+   "privatePool",
+   "safe"
+  ],
+  "airco": "Ja, tegen vergoeding, diverse ruimtes",
+  "seats": "Ja, 8 zitplaatsen",
+  "dist": {
+   "beach": 300,
+   "nightlife": 900,
+   "supermarket": 550,
+   "restaurant": 150,
+   "airport": 30000
+  },
+  "scores": {
+   "privacy": 4.0,
+   "view": 3.5,
+   "comfort": 4.0,
+   "quiet": 4.0,
+   "atmosphere": 4.0,
+   "garden": 4.0
+  },
   "groups": "groepen ok",
   "minAge": 18,
   "rating": 4,
@@ -456,7 +708,6 @@ window.HOUSES = [
  {
   "id": "1452",
   "name": "Villa Primavera",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-primavera.html",
   "town": "Lloret de Mar",
   "area": "Condado del Jaruco",
@@ -472,10 +723,29 @@ window.HOUSES = [
    "King": 1
   },
   "m2": 379,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": false,
-  "aircoPaid": false,
+  "features": [
+   "bbq",
+   "dishwasher",
+   "parking",
+   "privatePool"
+  ],
+  "airco": "",
+  "seats": "Ja, 4 zitplaatsen",
+  "dist": {
+   "beach": 2000,
+   "nightlife": 2600,
+   "supermarket": 1200,
+   "restaurant": 270,
+   "airport": 30000
+  },
+  "scores": {
+   "privacy": 4.0,
+   "view": 3.5,
+   "comfort": 4.0,
+   "quiet": 4.0,
+   "atmosphere": 4.0,
+   "garden": 4.0
+  },
   "groups": "groepen ok",
   "minAge": 18,
   "rating": 4,
@@ -492,7 +762,6 @@ window.HOUSES = [
  {
   "id": "1454",
   "name": "Villa Sunrise",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-sunrise.html",
   "town": "Lloret de Mar",
   "area": "de wijk Roca Grossa",
@@ -506,10 +775,28 @@ window.HOUSES = [
    "Single": 11
   },
   "m2": 242,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": true,
-  "aircoPaid": false,
+  "features": [
+   "bbq",
+   "parking",
+   "privatePool"
+  ],
+  "airco": "",
+  "seats": "Ja, 6 zitplaatsen",
+  "dist": {
+   "beach": 3100,
+   "nightlife": 3100,
+   "supermarket": 2300,
+   "restaurant": 2400,
+   "airport": 31400
+  },
+  "scores": {
+   "privacy": 4.0,
+   "view": 4.5,
+   "comfort": 4.0,
+   "quiet": 3.5,
+   "atmosphere": 3.5,
+   "garden": 4.0
+  },
   "groups": "groepen ok",
   "minAge": 18,
   "rating": 4,
@@ -526,7 +813,6 @@ window.HOUSES = [
  {
   "id": "1110",
   "name": "Villa Alba",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-alba.html",
   "town": "Lloret de Mar",
   "area": "Font de Sant Llorenc",
@@ -541,10 +827,29 @@ window.HOUSES = [
    "SofaBed": 1
   },
   "m2": 120,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": true,
-  "aircoPaid": false,
+  "features": [
+   "bbq",
+   "dishwasher",
+   "parking",
+   "privatePool"
+  ],
+  "airco": "",
+  "seats": "Ja, 8 zitplaatsen",
+  "dist": {
+   "beach": 1000,
+   "nightlife": 3800,
+   "supermarket": 2300,
+   "restaurant": 1000,
+   "airport": 31100
+  },
+  "scores": {
+   "privacy": 4.5,
+   "view": 3.5,
+   "comfort": 4.0,
+   "quiet": 3.5,
+   "atmosphere": 4.0,
+   "garden": 4.0
+  },
   "groups": "groepen ok",
   "minAge": 18,
   "rating": 4,
@@ -561,7 +866,6 @@ window.HOUSES = [
  {
   "id": "1168",
   "name": "Villa Baileys",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-baileys.html",
   "town": "Lloret de Mar",
   "area": "Fenals",
@@ -576,10 +880,29 @@ window.HOUSES = [
    "Double": 3
   },
   "m2": 420,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": false,
-  "aircoPaid": false,
+  "features": [
+   "bbq",
+   "bigTable",
+   "dishwasher",
+   "privatePool"
+  ],
+  "airco": "",
+  "seats": "Ja, 10 zitplaatsen",
+  "dist": {
+   "beach": 800,
+   "nightlife": 900,
+   "supermarket": 230,
+   "restaurant": 180,
+   "airport": 30000
+  },
+  "scores": {
+   "privacy": 4.0,
+   "view": 3.0,
+   "comfort": 4.0,
+   "quiet": 3.0,
+   "atmosphere": 4.0,
+   "garden": 4.0
+  },
   "groups": "groepen ok",
   "minAge": 18,
   "rating": 4,
@@ -596,7 +919,6 @@ window.HOUSES = [
  {
   "id": "1476",
   "name": "Villa Ibiza",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/blanes/villa-ibiza.html",
   "town": "Blanes",
   "area": "Rocca Grossa",
@@ -611,10 +933,32 @@ window.HOUSES = [
    "Double": 2
   },
   "m2": 180,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": true,
-  "aircoPaid": true,
+  "features": [
+   "airco",
+   "bbq",
+   "dishwasher",
+   "parking",
+   "privatePool",
+   "safe",
+   "seaView"
+  ],
+  "airco": "Ja, tegen vergoeding, diverse ruimtes",
+  "seats": "Ja, 8 zitplaatsen",
+  "dist": {
+   "beach": 1400,
+   "nightlife": 1300,
+   "supermarket": 650,
+   "restaurant": 850,
+   "airport": 31000
+  },
+  "scores": {
+   "privacy": 4.0,
+   "view": 4.5,
+   "comfort": 4.0,
+   "quiet": 4.0,
+   "atmosphere": 4.5,
+   "garden": 4.0
+  },
   "groups": "groepen ok",
   "minAge": 18,
   "rating": 4.5,
@@ -631,7 +975,6 @@ window.HOUSES = [
  {
   "id": "1139",
   "name": "Villa Infinity",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-infinity.html",
   "town": "Lloret de Mar",
   "area": "Canyelles",
@@ -646,10 +989,33 @@ window.HOUSES = [
    "King": 2
   },
   "m2": 500,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": false,
-  "aircoPaid": false,
+  "features": [
+   "airco",
+   "aircoFree",
+   "bbq",
+   "bigTable",
+   "dishwasher",
+   "parking",
+   "privatePool",
+   "sauna"
+  ],
+  "airco": "Ja, inbegrepen, diverse ruimtes",
+  "seats": "Ja, 10 zitplaatsen",
+  "dist": {
+   "beach": 700,
+   "nightlife": 3200,
+   "supermarket": 350,
+   "restaurant": 350,
+   "airport": 31400
+  },
+  "scores": {
+   "privacy": 4.5,
+   "view": 5.0,
+   "comfort": 4.0,
+   "quiet": 4.5,
+   "atmosphere": 4.5,
+   "garden": 5.0
+  },
   "groups": "gemengde groepen",
   "minAge": 24,
   "rating": 4.5,
@@ -666,7 +1032,6 @@ window.HOUSES = [
  {
   "id": "1049",
   "name": "Villa Paris",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-paris.html",
   "town": "Lloret de Mar",
   "area": "Rocca Grossa",
@@ -680,10 +1045,29 @@ window.HOUSES = [
    "Single": 11
   },
   "m2": 248,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": true,
-  "aircoPaid": false,
+  "features": [
+   "bbq",
+   "dishwasher",
+   "parking",
+   "privatePool"
+  ],
+  "airco": "",
+  "seats": "Ja, 8 zitplaatsen",
+  "dist": {
+   "beach": 2300,
+   "nightlife": 2200,
+   "supermarket": 2000,
+   "restaurant": 2000,
+   "airport": 35000
+  },
+  "scores": {
+   "privacy": 4.0,
+   "view": 4.0,
+   "comfort": 3.5,
+   "quiet": 3.5,
+   "atmosphere": 3.5,
+   "garden": 3.5
+  },
   "groups": "groepen ok",
   "minAge": 18,
   "rating": 3,
@@ -700,7 +1084,6 @@ window.HOUSES = [
  {
   "id": "1013",
   "name": "Villa Sofia",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-sofia.html",
   "town": "Lloret de Mar",
   "area": "Lloret Blau",
@@ -715,10 +1098,30 @@ window.HOUSES = [
    "Double": 2
   },
   "m2": 190,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": true,
-  "aircoPaid": false,
+  "features": [
+   "bbq",
+   "dishwasher",
+   "parking",
+   "privatePool",
+   "seaView"
+  ],
+  "airco": "",
+  "seats": "Ja, 8 zitplaatsen",
+  "dist": {
+   "beach": 6800,
+   "nightlife": 6300,
+   "supermarket": 4200,
+   "restaurant": 4400,
+   "airport": 23200
+  },
+  "scores": {
+   "privacy": 4.0,
+   "view": 4.0,
+   "comfort": 4.0,
+   "quiet": 4.0,
+   "atmosphere": 4.5,
+   "garden": 3.5
+  },
   "groups": "groepen ok",
   "minAge": 18,
   "rating": 4,
@@ -735,7 +1138,6 @@ window.HOUSES = [
  {
   "id": "1059",
   "name": "Villa Valentina",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-valentina.html",
   "town": "Lloret de Mar",
   "area": "Lloret Dalt",
@@ -750,10 +1152,30 @@ window.HOUSES = [
    "Double": 4
   },
   "m2": 250,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": true,
-  "aircoPaid": false,
+  "features": [
+   "bbq",
+   "dishwasher",
+   "parking",
+   "privatePool",
+   "seaView"
+  ],
+  "airco": "",
+  "seats": "Ja, 8 zitplaatsen",
+  "dist": {
+   "beach": 1200,
+   "nightlife": 2100,
+   "supermarket": 700,
+   "restaurant": 800,
+   "airport": 29700
+  },
+  "scores": {
+   "privacy": 3.5,
+   "view": 4.0,
+   "comfort": 3.5,
+   "quiet": 3.5,
+   "atmosphere": 4.0,
+   "garden": 3.5
+  },
   "groups": "groepen ok",
   "minAge": 18,
   "rating": 3.5,
@@ -770,7 +1192,6 @@ window.HOUSES = [
  {
   "id": "1330",
   "name": "Villa Fransisca",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-fransisca.html",
   "town": "Lloret de Mar",
   "area": "Santa Cristina",
@@ -784,10 +1205,30 @@ window.HOUSES = [
    "Single": 8
   },
   "m2": 160,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": false,
-  "aircoPaid": false,
+  "features": [
+   "bbq",
+   "dishwasher",
+   "parking",
+   "privatePool",
+   "safe"
+  ],
+  "airco": "",
+  "seats": "Ja, 8 zitplaatsen",
+  "dist": {
+   "beach": 1600,
+   "nightlife": 3500,
+   "supermarket": 1400,
+   "restaurant": 700,
+   "airport": 32000
+  },
+  "scores": {
+   "privacy": 4.0,
+   "view": 3.5,
+   "comfort": 4.0,
+   "quiet": 4.0,
+   "atmosphere": 4.0,
+   "garden": 4.0
+  },
   "groups": "groepen ok",
   "minAge": 18,
   "rating": 4.5,
@@ -804,7 +1245,6 @@ window.HOUSES = [
  {
   "id": "1028",
   "name": "Villa Marcella",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-marcella.html",
   "town": "Lloret de Mar",
   "area": "Rocca Grossa",
@@ -818,10 +1258,31 @@ window.HOUSES = [
    "Double": 4
   },
   "m2": 280,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": true,
-  "aircoPaid": true,
+  "features": [
+   "airco",
+   "bbq",
+   "bigTable",
+   "dishwasher",
+   "parking",
+   "privatePool"
+  ],
+  "airco": "Ja, tegen vergoeding, diverse ruimtes",
+  "seats": "Ja, 10 zitplaatsen",
+  "dist": {
+   "beach": 2200,
+   "nightlife": 2200,
+   "supermarket": 1700,
+   "restaurant": 350,
+   "airport": 30000
+  },
+  "scores": {
+   "privacy": 4.0,
+   "view": 4.0,
+   "comfort": 4.0,
+   "quiet": 4.0,
+   "atmosphere": 4.0,
+   "garden": 3.5
+  },
   "groups": "groepen ok",
   "minAge": 18,
   "rating": 4,
@@ -838,7 +1299,6 @@ window.HOUSES = [
  {
   "id": "1122",
   "name": "Villa Mauri",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/blanes/villa-mauri.html",
   "town": "Blanes",
   "area": "San Joan",
@@ -853,10 +1313,30 @@ window.HOUSES = [
    "Double": 2
   },
   "m2": 300,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": true,
-  "aircoPaid": false,
+  "features": [
+   "bbq",
+   "dishwasher",
+   "games",
+   "parking",
+   "privatePool"
+  ],
+  "airco": "",
+  "seats": "Ja, 6 zitplaatsen",
+  "dist": {
+   "beach": 900,
+   "nightlife": 1000,
+   "supermarket": 850,
+   "restaurant": 900,
+   "airport": 33800
+  },
+  "scores": {
+   "privacy": 4.0,
+   "view": 4.5,
+   "comfort": 4.5,
+   "quiet": 4.0,
+   "atmosphere": 4.0,
+   "garden": 4.0
+  },
   "groups": "gemengde groepen",
   "minAge": 24,
   "rating": 3.5,
@@ -873,7 +1353,6 @@ window.HOUSES = [
  {
   "id": "1192",
   "name": "Villa Miro",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-miro.html",
   "town": "Lloret de Mar",
   "area": "Condado del Jaruco",
@@ -888,10 +1367,30 @@ window.HOUSES = [
    "Double": 3
   },
   "m2": 350,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": false,
-  "aircoPaid": false,
+  "features": [
+   "bbq",
+   "dishwasher",
+   "games",
+   "parking",
+   "privatePool"
+  ],
+  "airco": "",
+  "seats": "Ja, 6 zitplaatsen",
+  "dist": {
+   "beach": 2400,
+   "nightlife": 2600,
+   "supermarket": 1000,
+   "restaurant": 500,
+   "airport": 27200
+  },
+  "scores": {
+   "privacy": 4.0,
+   "view": 4.0,
+   "comfort": 3.5,
+   "quiet": 3.5,
+   "atmosphere": 3.5,
+   "garden": 4.0
+  },
   "groups": "gemengde groepen",
   "minAge": 24,
   "rating": 4,
@@ -908,7 +1407,6 @@ window.HOUSES = [
  {
   "id": "1455",
   "name": "Villa Palmera",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-palmera.html",
   "town": "Lloret de Mar",
   "area": "Lloret Dalt",
@@ -923,10 +1421,23 @@ window.HOUSES = [
    "King": 2
   },
   "m2": 182,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": false,
-  "aircoPaid": true,
+  "features": [
+   "airco",
+   "bbq",
+   "dishwasher",
+   "parking",
+   "privatePool"
+  ],
+  "airco": "Ja, tegen vergoeding, diverse ruimtes",
+  "seats": "",
+  "dist": {
+   "beach": 1300,
+   "nightlife": 1500,
+   "supermarket": 1000,
+   "restaurant": 1000,
+   "airport": 31200
+  },
+  "scores": {},
   "groups": "groepen ok",
   "minAge": 18,
   "rating": 4,
@@ -943,7 +1454,6 @@ window.HOUSES = [
  {
   "id": "1071",
   "name": "Villa Rosa",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-rosa.html",
   "town": "Lloret de Mar",
   "area": "Font de Sant Llorenc",
@@ -958,10 +1468,29 @@ window.HOUSES = [
    "King": 2
   },
   "m2": 120,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": true,
-  "aircoPaid": false,
+  "features": [
+   "bbq",
+   "dishwasher",
+   "poolPrivate",
+   "privatePool"
+  ],
+  "airco": "",
+  "seats": "Ja, 6 zitplaatsen",
+  "dist": {
+   "beach": 1000,
+   "nightlife": 3800,
+   "supermarket": 2300,
+   "restaurant": 1000,
+   "airport": 31100
+  },
+  "scores": {
+   "privacy": 3.5,
+   "view": 3.5,
+   "comfort": 3.0,
+   "quiet": 3.5,
+   "atmosphere": 3.0,
+   "garden": 3.5
+  },
   "groups": "groepen ok",
   "minAge": 18,
   "rating": 3.5,
@@ -978,7 +1507,6 @@ window.HOUSES = [
  {
   "id": "1057",
   "name": "Villa Santa Maria",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-santa-maria.html",
   "town": "Lloret de Mar",
   "area": "het hart van een rustige woonwijk",
@@ -992,10 +1520,29 @@ window.HOUSES = [
    "Single": 8
   },
   "m2": 130,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": false,
-  "aircoPaid": true,
+  "features": [
+   "airco",
+   "bbq",
+   "dishwasher",
+   "privatePool"
+  ],
+  "airco": "Ja, tegen vergoeding, woonkamer",
+  "seats": "Ja, 8 zitplaatsen",
+  "dist": {
+   "beach": 6100,
+   "nightlife": 5800,
+   "supermarket": 3600,
+   "restaurant": 3800,
+   "airport": 25300
+  },
+  "scores": {
+   "privacy": 4.5,
+   "view": 4.0,
+   "comfort": 4.0,
+   "quiet": 4.5,
+   "atmosphere": 3.5,
+   "garden": 4.0
+  },
   "groups": "gemengde groepen",
   "minAge": 24,
   "rating": 3.5,
@@ -1012,7 +1559,6 @@ window.HOUSES = [
  {
   "id": "1072",
   "name": "Villa Sarai",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-sarai.html",
   "town": "Lloret de Mar",
   "area": "Lloret Dalt",
@@ -1027,10 +1573,29 @@ window.HOUSES = [
    "Double": 1
   },
   "m2": 150,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": true,
-  "aircoPaid": true,
+  "features": [
+   "airco",
+   "bbq",
+   "dishwasher",
+   "privatePool"
+  ],
+  "airco": "Ja, tegen vergoeding, woonkamer",
+  "seats": "Ja, 6 zitplaatsen",
+  "dist": {
+   "beach": 850,
+   "nightlife": 1000,
+   "supermarket": 500,
+   "restaurant": 500,
+   "airport": 35000
+  },
+  "scores": {
+   "privacy": 3.5,
+   "view": 3.0,
+   "comfort": 3.5,
+   "quiet": 3.5,
+   "atmosphere": 3.5,
+   "garden": 3.5
+  },
   "groups": "groepen ok",
   "minAge": 18,
   "rating": 3.5,
@@ -1047,7 +1612,6 @@ window.HOUSES = [
  {
   "id": "1035",
   "name": "Villa Lloret",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-lloret.html",
   "town": "Lloret de Mar",
   "area": "Lloret Center",
@@ -1062,10 +1626,29 @@ window.HOUSES = [
    "Double": 1
   },
   "m2": 130,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": true,
-  "aircoPaid": false,
+  "features": [
+   "bbq",
+   "dishwasher",
+   "parking",
+   "safe"
+  ],
+  "airco": "",
+  "seats": "Ja, 6 zitplaatsen",
+  "dist": {
+   "beach": 500,
+   "nightlife": 900,
+   "supermarket": 450,
+   "restaurant": 500,
+   "airport": 29300
+  },
+  "scores": {
+   "privacy": 4.0,
+   "view": 3.0,
+   "comfort": 4.0,
+   "quiet": 2.5,
+   "atmosphere": 4.0,
+   "garden": 4.0
+  },
   "groups": "groepen ok",
   "minAge": 18,
   "rating": 3.5,
@@ -1082,7 +1665,6 @@ window.HOUSES = [
  {
   "id": "1065",
   "name": "Villa Donna",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-donna.html",
   "town": "Lloret de Mar",
   "area": "Rocca Grossa",
@@ -1096,10 +1678,28 @@ window.HOUSES = [
    "Single": 8
   },
   "m2": 120,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": true,
-  "aircoPaid": false,
+  "features": [
+   "bbq",
+   "dishwasher",
+   "privatePool"
+  ],
+  "airco": "",
+  "seats": "Ja, 4 zitplaatsen",
+  "dist": {
+   "beach": 2400,
+   "nightlife": 2300,
+   "supermarket": 1800,
+   "restaurant": 450,
+   "airport": 30000
+  },
+  "scores": {
+   "privacy": 3.5,
+   "view": 4.0,
+   "comfort": 3.0,
+   "quiet": 4.0,
+   "atmosphere": 3.5,
+   "garden": 3.5
+  },
   "groups": "groepen ok",
   "minAge": 24,
   "rating": 3.5,
@@ -1116,7 +1716,6 @@ window.HOUSES = [
  {
   "id": "1254",
   "name": "Villa Esmee",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-esmee.html",
   "town": "Lloret de Mar",
   "area": "Lloret Blau",
@@ -1131,10 +1730,28 @@ window.HOUSES = [
    "Double": 1
   },
   "m2": 160,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": true,
-  "aircoPaid": false,
+  "features": [
+   "bbq",
+   "dishwasher",
+   "privatePool"
+  ],
+  "airco": "",
+  "seats": "Ja, 8 zitplaatsen",
+  "dist": {
+   "beach": 7100,
+   "nightlife": 6700,
+   "supermarket": 4500,
+   "restaurant": 4500,
+   "airport": 26000
+  },
+  "scores": {
+   "privacy": 4.0,
+   "view": 3.5,
+   "comfort": 3.5,
+   "quiet": 3.5,
+   "atmosphere": 3.5,
+   "garden": 3.5
+  },
   "groups": "geen groepen",
   "minAge": null,
   "rating": 3.5,
@@ -1151,7 +1768,6 @@ window.HOUSES = [
  {
   "id": "1333",
   "name": "Villa Gabriella",
-  "type": "Villa",
   "url": "https://www.costacabana.nl/vakantiehuis/spanje/costa-brava/lloret-de-mar/villa-gabriella.html",
   "town": "Lloret de Mar",
   "area": "Rocca Grossa",
@@ -1165,10 +1781,30 @@ window.HOUSES = [
    "Single": 5
   },
   "m2": 55,
-  "pool": true,
-  "poolType": "Outdoor",
-  "pets": false,
-  "aircoPaid": false,
+  "features": [
+   "bbq",
+   "dishwasher",
+   "poolPrivate",
+   "privatePool",
+   "seaView"
+  ],
+  "airco": "",
+  "seats": "",
+  "dist": {
+   "beach": 1600,
+   "nightlife": 2500,
+   "supermarket": 750,
+   "restaurant": 450,
+   "airport": 31100
+  },
+  "scores": {
+   "privacy": 4.5,
+   "view": 4.0,
+   "comfort": 4.0,
+   "quiet": 4.0,
+   "atmosphere": 4.0,
+   "garden": 4.0
+  },
   "groups": "groepen ok",
   "minAge": 18,
   "rating": 3.5,
